@@ -1,0 +1,625 @@
+/* --------------------------------------------------------------------------
+   Desktop / Small Laptops (992px – 1366px)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) and (max-width: 1366px) {
+
+    /* Hero copy */
+    .pu-tours-hero-title {
+        font-size: 56px;
+    }
+
+    /* Carousel stage / device */
+    .pu-tours-page-video-cards-stage {
+        height: 360px;
+    }
+
+    .pu-tours-page-device-center-wrapper {
+        width: 720px;
+        height: 300px;
+    }
+
+    .pu-tours-page-macbook-device-container {
+        width: 720px;
+        height: 290px;
+    }
+
+    /* Side cards */
+    .pu-tours-page-side-card {
+        width: 380px;
+        height: 245px;
+    }
+
+    .pu-tours-page-side-card-left {
+        left: -100px;
+        transform: perspective(1000px) rotateY(-18deg) scale(0.9) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-right {
+        right: -100px;
+        transform: perspective(1000px) rotateY(18deg) scale(0.9) translateX(var(--drag-offset));
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets & Small Laptops (768px – 991px)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* Hero copy */
+    .pu-tours-page-hero-content-wrapper {
+        padding-top: 36px;
+    }
+
+    .pu-tours-hero-title {
+        font-size: 46px;
+        line-height: 115%;
+    }
+
+    .pu-tours-hero-subtitle {
+        font-size: 16px;
+        padding: 0 16px;
+    }
+
+    /* Buttons */
+    .pu-tours-page-hero-buttons-container {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .pu-tours-btn-primary {
+        width: 320px !important;
+        height: 56px;
+        font-size: 16px !important;
+        padding: 14px 24px;
+    }
+
+    .pu-tours-btn-outline {
+        width: 280px !important;
+        height: 56px;
+        font-size: 17px !important;
+        padding: 14px 24px;
+    }
+
+    /* Carousel stage / device */
+    .pu-tours-page-video-cards-stage {
+        height: 310px;
+    }
+
+    .pu-tours-page-device-center-wrapper {
+        width: 600px;
+        height: 250px;
+    }
+
+    .pu-tours-page-macbook-device-container {
+        width: 600px;
+        height: 242px;
+    }
+
+    .pu-tours-page-edge-gradient-overlay {
+        width: 80px;
+    }
+
+    /* Side cards */
+    .pu-tours-page-side-card {
+        width: 280px;
+        height: 200px;
+        bottom: 8px;
+    }
+
+    .pu-tours-page-side-card-face {
+        padding: 16px;
+    }
+
+    .pu-tours-page-side-card-left {
+        left: -70px;
+        transform-origin: left center;
+        transform: perspective(800px) rotateY(-18deg) scale(0.9) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-right {
+        right: -70px;
+        transform-origin: right center;
+        transform: perspective(800px) rotateY(18deg) scale(0.9) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-heading {
+        font-size: 22px;
+    }
+
+    .pu-tours-page-side-card-subheading {
+        font-size: 14px;
+    }
+
+    /* Bottom banner */
+    .pu-tours-page-bottom-banner-section {
+        margin-top: -65px;
+    }
+
+    .pu-tours-page-bottom-banner-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Base (all screens ≤ 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+
+    .pu-tours-hero-bg {
+        background-image: url('../images/hero-banner/hostel-residence-background-phone.webp');
+        z-index: -1;
+    }
+
+
+    /* Hero section / layout */
+    .pu-tours-page-hero-section {
+        background-size: cover;
+        background-position: center top;
+        min-height: auto;
+    }
+
+    .pu-tours-page-hero-content-wrapper {
+        padding-top: 24px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Top capsule */
+    .pu-tours-page-hero-capsule-container {
+        margin-bottom: 18px;
+    }
+
+    .pu-tours-page-hero-capsule {
+        padding: 8px 20px;
+        max-width: 90%;
+    }
+
+    .pu-tours-page-hero-capsule-text {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    /* Main title — exact user spec */
+    .pu-tours-page-hero-title-container {
+        margin-bottom: 14px;
+        padding: 0 16px;
+    }
+
+    .pu-tours-hero-title {
+        font-family: var(--font-polymath-bold);
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #0F0445;
+    }
+
+    /* Description — exact user spec */
+    .pu-tours-page-hero-desc-container {
+        margin-bottom: 24px;
+        padding: 0 18px;
+    }
+
+    .pu-tours-hero-subtitle {
+        font-family: var(--font-figtree-regular);
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 135%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #5B5B5B;
+    }
+
+    /* Buttons re-ordered below showcase & dots on mobile — exact user spec */
+    .pu-tours-page-hero-buttons-container {
+        order: 6;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        margin-top: 24px;
+        margin-bottom: 28px;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    /* Button 1: Browse all 27 tours */
+    .pu-tours-btn-primary {
+        width: 100%;
+        max-width: 320px;
+        height: 56px;
+        padding: 14px 24px;
+        font-family: var(--font-figtree-semibold);
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #0F0445;
+        border-color: #0F0445;
+    }
+
+    /* Button 2: Meet the leaders */
+    .pu-tours-btn-outline {
+        width: 100%;
+        max-width: 320px;
+        height: 56px;
+        padding: 14px 24px;
+        font-family: var(--font-figtree-semibold);
+        font-weight: 700;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #0F0445;
+        border: 3px solid transparent;
+        background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, var(--pu-btn-border-gradient) border-box;
+    }
+
+    /* Carousel stage / device — swap desktop MacBook frame for phone frame */
+    .pu-tours-page-macbook-device-container {
+        display: none !important;
+    }
+
+    .pu-tours-page-mobile-device-container {
+        display: block !important;
+        width: 200px;
+        height: 400px;
+    }
+
+    .pu-tours-page-device-center-wrapper {
+        width: 200px;
+        height: 400px;
+        margin: 0 auto;
+        z-index: 10;
+    }
+
+    .pu-tours-page-video-cards-stage {
+        height: 415px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .pu-tours-page-video-showcase-section {
+        order: 4;
+        margin-top: 4px;
+    }
+
+    .pu-tours-page-edge-gradient-overlay {
+        width: 50px;
+    }
+
+    /* Play button — smaller on mobile */
+    .pu-tours-page-play-btn-circle,
+    .pu-tours-page-play-btn-mobile {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .pu-tours-page-play-btn-circle svg,
+    .pu-tours-page-play-btn-mobile svg {
+        width: 20px !important;
+        height: 20px !important;
+        margin-left: 2px !important;
+    }
+
+    /* Side cards — 0 space from screen edges, tilted inward */
+    .pu-tours-page-side-card {
+        width: 145px;
+        height: 310px;
+        bottom: 25px;
+        border-radius: 18px;
+        z-index: 4;
+    }
+
+    .pu-tours-page-side-card-face {
+        padding: 14px 10px;
+    }
+
+    .pu-tours-page-side-card-left {
+        left: -40px;
+        transform-origin: left center;
+        transform: perspective(600px) rotateY(-16deg) scale(0.88) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-right {
+        right: -40px;
+        transform-origin: right center;
+        transform: perspective(600px) rotateY(16deg) scale(0.88) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-heading {
+        font-size: 20px;
+        line-height: 1.05;
+    }
+
+    .pu-tours-page-side-card-subheading {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    /* Pagination dots re-ordered below showcase */
+    .pu-tours-page-tour-indicator-container {
+        order: 5;
+        margin-top: 14px;
+        margin-bottom: 4px;
+    }
+
+    /* Bottom banner */
+    .pu-tours-page-bottom-banner-section {
+        padding: 20px 16px;
+        margin-top: 0 !important;
+    }
+
+    .pu-tours-page-bottom-banner-text {
+        font-family: var(--font-figtree-regular);
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .pu-tours-page-banner-highlight {
+        font-family: var(--font-figtree-regular);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — 576px to 767px
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    /* Hero copy */
+    .pu-tours-hero-title {
+        font-size: 42px;
+    }
+
+    /* Buttons */
+    .pu-tours-page-hero-buttons-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pu-tours-btn-primary,
+    .pu-tours-btn-outline {
+        width: auto;
+        min-width: 200px;
+        font-size: 16px !important;
+        padding-inline: 16px !important;
+    }
+
+    /* Carousel stage / device */
+    .pu-tours-page-mobile-device-container {
+        width: 225px;
+        height: 450px;
+    }
+
+    .pu-tours-page-device-center-wrapper {
+        width: 225px;
+        height: 450px;
+    }
+
+    .pu-tours-page-video-cards-stage {
+        height: 460px;
+    }
+
+    /* Side cards */
+    .pu-tours-page-side-card {
+        width: 210px;
+        height: 350px;
+    }
+
+    .pu-tours-page-side-card-left {
+        left: -30px;
+        transform-origin: left center;
+        transform: perspective(700px) rotateY(-18deg) scale(0.9) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-right {
+        right: -30px;
+        transform-origin: right center;
+        transform: perspective(700px) rotateY(18deg) scale(0.9) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-heading {
+        font-size: 24px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — 480px to 575px
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 480px) and (max-width: 575px) {
+
+    /* Hero copy */
+    .pu-tours-hero-title {
+        font-size: 40px;
+    }
+
+    /* Carousel stage / device */
+    .pu-tours-page-mobile-device-container {
+        width: 215px;
+        height: 430px;
+    }
+
+    .pu-tours-page-device-center-wrapper {
+        width: 215px;
+        height: 430px;
+    }
+
+    .pu-tours-page-video-cards-stage {
+        height: 440px;
+    }
+
+    /* Side cards */
+    .pu-tours-page-side-card {
+        width: 170px;
+        height: 335px;
+    }
+
+    .pu-tours-page-side-card-left {
+        left: -35px;
+        transform-origin: left center;
+        transform: perspective(600px) rotateY(-18deg) scale(0.88) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-right {
+        right: -35px;
+        transform-origin: right center;
+        transform: perspective(600px) rotateY(18deg) scale(0.88) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-heading {
+        font-size: 22px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — 361px to 479px
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 361px) and (max-width: 479px) {
+
+    /* Hero copy */
+    .pu-tours-hero-title {
+        font-size: 40px;
+    }
+
+    .pu-tours-hero-subtitle {
+        font-size: 14px;
+        padding-inline: 0 !important;
+    }
+
+    /* Carousel stage / device */
+    .pu-tours-page-mobile-device-container {
+        width: 195px;
+        height: 390px;
+    }
+
+    .pu-tours-page-device-center-wrapper {
+        width: 195px;
+        height: 390px;
+    }
+
+    .pu-tours-page-video-cards-stage {
+        height: 405px;
+    }
+
+    /* Side cards */
+    .pu-tours-page-side-card {
+        width: 140px;
+        height: 300px;
+    }
+
+    .pu-tours-page-side-card-left {
+        left: -40px;
+        transform-origin: left center;
+        transform: perspective(600px) rotateY(-16deg) scale(0.88) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-right {
+        right: -40px;
+        transform-origin: right center;
+        transform: perspective(600px) rotateY(16deg) scale(0.88) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-heading {
+        font-size: 19px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile — ≤ 360px
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 360px) {
+
+    /* Hero copy */
+    .pu-tours-hero-title {
+        font-size: 36px;
+    }
+
+    .pu-tours-hero-subtitle {
+        font-size: 13px;
+        padding-inline: 0 !important;
+    }
+
+    /* Buttons */
+    .pu-tours-btn-primary {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 52px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pu-tours-btn-outline {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 52px;
+        font-size: 19px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Carousel stage / device */
+    .pu-tours-page-mobile-device-container {
+        width: 175px;
+        height: 350px;
+    }
+
+    .pu-tours-page-device-center-wrapper {
+        width: 175px;
+        height: 350px;
+    }
+
+    .pu-tours-page-video-cards-stage {
+        height: 365px;
+    }
+
+    /* Side cards */
+    .pu-tours-page-side-card {
+        width: 125px;
+        height: 275px;
+    }
+
+    .pu-tours-page-side-card-left {
+        left: -45px;
+        transform-origin: left center;
+        transform: perspective(500px) rotateY(-14deg) scale(0.85) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-right {
+        right: -45px;
+        transform-origin: right center;
+        transform: perspective(500px) rotateY(14deg) scale(0.85) translateX(var(--drag-offset));
+    }
+
+    .pu-tours-page-side-card-heading {
+        font-size: 16px;
+    }
+
+    .pu-tours-page-side-card-subheading {
+        font-size: 11px;
+    }
+
+    /* Bottom banner */
+    .pu-tours-bottom-banner p {
+        font-size: 0.8rem;
+    }
+}

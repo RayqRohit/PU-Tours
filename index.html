@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Added styles for the video section from the Tours folder -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/media.css">
 </head>
 
 <body>
 
     <!-- Hero Section -->
-    <section class="pu-tours-hero-section text-center position-relative">
+    <section class="pu-tours-hero-section text-center position-relative d-flex flex-column">
         <div class="pu-tours-hero-bg position-absolute w-100 h-100"></div>
 
-        <div class="container pt-5 pb-2">
+        <div class="container pt-5 pb-2 order-1">
             <!-- Badge -->
             <div class="mb-4 pt-4">
                 <span class="badge rounded-pill bg-white text-dark py-2 px-4 shadow-sm pu-tours-custom-badge">Practical
@@ -29,23 +29,24 @@
             <h1 class="pu-tours-hero-title mb-4">Experience the Industry While You Study</h1>
 
             <!-- Subheading -->
-            <p class="pu-tours-hero-subtitle mb-5 mx-auto">
+            <p class="pu-tours-hero-subtitle mb-4 mx-auto px-3">
                 Parul University takes students beyond classroom theory and into working laboratories, boardrooms,
                 hospitals, project sites, courtrooms and factory floors, with faculty-led access to named experts and
                 leading organizations.
             </p>
 
-            <!-- Buttons -->
-            <div class="d-flex justify-content-center gap-3 mb-1">
+        </div>
+
+        <div class="pu-tours-page-hero-buttons-container order-3 order-md-2 mb-md-5 mt-4 mt-md-0 z-3">
+            <div class="container d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
                 <a href="#" class="btn pu-tours-btn-primary rounded-pill py-3 px-5 shadow">Browse all 27 tours</a>
                 <a href="#" class="btn pu-tours-btn-outline rounded-pill py-3 px-5 shadow-sm bg-white">Meet the
                     leaders</a>
             </div>
-
         </div>
 
         <!-- 3D Video Showcase & Carousel Stage -->
-                  <section class="pu-tours-page-video-showcase-section position-relative w-100 mt-2 d-flex justify-content-center align-items-end" aria-label="Tour Video Showcase" id="puToursShowcase">
+                  <section class="pu-tours-page-video-showcase-section position-relative w-100 mt-2 d-flex justify-content-center align-items-end order-2 order-md-3" aria-label="Tour Video Showcase" id="puToursShowcase">
         <div class="pu-tours-page-video-cards-stage position-relative w-100 mw-100 d-flex justify-content-center align-items-end mx-auto overflow-hidden" id="puToursStage">
 
           <!-- Left Edge Fade Gradient -->
@@ -157,9 +158,9 @@
       </section>
 
         <!-- Bottom Banner -->
-        <div class="pu-tours-bottom-banner w-100 py-4 text-center">
+        <div class="pu-tours-bottom-banner w-100 py-4 text-center order-4 z-3 position-relative">
             <div class="container">
-                <p class="mb-0" style="font-size: 0.95rem;">
+                <p class="mb-0">
                     <strong>Also searched as:</strong> industry tour, industrial visit, practical exposure, industry
                     exposure, experiential learning and hands-on learning. Parul University uses Practical Learning Tour
                     for its structured, documented format. 27 Tours in one academic year
