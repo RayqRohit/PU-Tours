@@ -768,27 +768,34 @@ img {
 
 .pu-tours-btn-primary {
     background-color: #16074a;
-    color: white;
+    color: white !important;
     font-family: var(--font-figtree-semibold);
-    border: none;
-    transition: background-color 0.3s;
+    border: 1px solid #16074a;
+    transition: all 0.3s;
 }
 
-.pu-tours-btn-primary:hover {
-    background-color: #29157a;
-    color: white;
+.pu-tours-btn-primary:hover,
+.pu-tours-btn-primary:focus,
+.pu-tours-btn-primary:active {
+    background-color: #29157a !important;
+    border-color: #29157a !important;
+    color: white !important;
 }
 
 .pu-tours-btn-outline {
-    color: #16074a;
+    color: #16074a !important;
     font-family: var(--font-figtree-semibold);
     border: 1px solid #dcdcdc;
-    transition: background-color 0.3s;
+    background-color: white;
+    transition: all 0.3s;
 }
 
-.pu-tours-btn-outline:hover {
-    background-color: #f8f9fa;
-    color: #16074a;
+.pu-tours-btn-outline:hover,
+.pu-tours-btn-outline:focus,
+.pu-tours-btn-outline:active {
+    background-color: #16074a !important;
+    color: white !important;
+    border-color: #16074a !important;
 }
 
 .pu-tours-video-container {
