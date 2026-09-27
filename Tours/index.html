@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical Learning Tours 2025-26 | Parul University</title>
+  <meta name="description"
+    content="Experience the Industry While You Study with Parul University's 27 Practical Learning Tours across India. Faculty-led access to named experts and leading organizations.">
+
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="pu-tours-page-body">
+
+  <!-- Main Hero Section -->
+  <main class="pu-tours-page-hero-section">
+
+    <div class="pu-tours-page-hero-content-wrapper container-fluid px-0">
+
+      <!-- Top Pill Capsule -->
+      <div class="pu-tours-page-hero-capsule-container">
+        <div class="pu-tours-page-hero-capsule" role="status">
+          <span class="pu-tours-page-hero-capsule-text">Practical Learning Tours · 2025-26</span>
+        </div>
+      </div>
+
+      <!-- Main Title -->
+      <div class="pu-tours-page-hero-title-container">
+        <h1 class="pu-tours-page-hero-main-title">Experience the Industry While You Study</h1>
+      </div>
+
+      <!-- Description -->
+      <div class="pu-tours-page-hero-desc-container">
+        <p class="pu-tours-page-hero-description">
+          Parul University takes students beyond classroom theory and into working laboratories, boardrooms, hospitals,
+          project sites, courtrooms and factory floors, with faculty-led access to named experts and leading
+          organizations.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="pu-tours-page-hero-buttons-container">
+        <button type="button" class="pu-tours-page-btn-primary" data-bs-toggle="modal" data-bs-target="#allToursModal"
+          id="btnBrowseTours">
+          Browse all 27 tours
+        </button>
+        <button type="button" class="pu-tours-page-btn-secondary" data-bs-toggle="modal" data-bs-target="#leadersModal"
+          id="btnMeetLeaders">
+          Meet the leaders
+        </button>
+      </div>
+
+      <!-- 3D Video Showcase & Carousel Stage -->
+      <section class="pu-tours-page-video-showcase-section" aria-label="Tour Video Showcase" id="puToursShowcase">
+        <div class="pu-tours-page-video-cards-stage" id="puToursStage">
+
+          <!-- Left Edge Fade Gradient -->
+          <div class="pu-tours-page-edge-gradient-overlay pu-tours-page-edge-gradient-left" aria-hidden="true"></div>
+
+          <!-- Tilted Left Side Card (0 space from left screen edge, tilted inward) -->
+          <div class="pu-tours-page-side-card pu-tours-page-side-card-left" id="sideCardLeft" role="button" tabindex="0"
+            title="Click to view previous tour">
+            <div class="pu-tours-page-side-card-slider" id="sideCardLeftSlider">
+              <div class="pu-tours-page-side-card-face"
+                style="background-image: url('https://img.youtube.com/vi/f4RvTWOn7M4/maxresdefault.jpg');">
+              </div>
+            </div>
+          </div>
+
+          <!-- Central Device Container -->
+          <div class="pu-tours-page-device-center-wrapper" id="deviceCenterWrapper">
+
+            <!-- Desktop MacBook Frame Device -->
+            <div class="pu-tours-page-macbook-device-container" id="macbookDevice">
+              <!-- Frame Overlay SVG Layer -->
+              <div class="pu-tours-page-macbook-frame-overlay" aria-hidden="true"></div>
+
+              <!-- Close Video Button -->
+              <button type="button" class="pu-tours-page-btn-close-video" id="closeVideoDesktop"
+                aria-label="Close Video">✕</button>
+
+              <!-- Inner Screen Content -->
+              <div class="pu-tours-page-macbook-screen-content" id="desktopScreenContent">
+
+                <div class="pu-tours-page-screen-slider" id="desktopScreenSlider">
+                  <!-- Video Thumbnail View (Default) -->
+                  <div class="pu-tours-page-video-thumbnail-view" id="desktopThumbnail"
+                    style="background-image: url('https://img.youtube.com/vi/CoK-vRyucMU/maxresdefault.jpg');">
+
+                    <!-- Play Button Circle with SVG -->
+                    <div class="pu-tours-page-play-btn-circle" id="playButtonDesktop" role="button"
+                      aria-label="Play Tour Video">
+                      <svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.4487 18.8018L48.9087 33.5011L23.4487 48.2004L23.4487 18.8018Z" fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Embedded YouTube Video Iframe -->
+                <iframe id="desktopIframe" class="pu-tours-page-youtube-iframe-player" src=""
+                  title="Parul University Practical Learning Tour Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+
+              </div>
+            </div>
+
+            <!-- Mobile Phone Frame Device (Displayed on Mobile Screen Sizes) -->
+            <div class="pu-tours-page-mobile-device-container" id="mobileDevice">
+              <!-- Mobile Frame Overlay SVG -->
+              <div class="pu-tours-page-mobile-frame-overlay" aria-hidden="true"></div>
+
+              <!-- Close Video Mobile -->
+              <button type="button" class="pu-tours-page-btn-close-video" id="closeVideoMobile"
+                aria-label="Close Video">✕</button>
+
+              <!-- Mobile Screen Content -->
+              <div class="pu-tours-page-mobile-screen-content" id="mobileScreenContent">
+
+                <div class="pu-tours-page-screen-slider" id="mobileScreenSlider">
+                  <!-- Mobile Thumbnail View -->
+                  <div class="pu-tours-page-mobile-thumbnail-view" id="mobileThumbnail"
+                    style="background-image: url('https://img.youtube.com/vi/CoK-vRyucMU/maxresdefault.jpg');">
+
+                    <!-- Mobile Play Button (Smaller on phone) -->
+                    <div class="pu-tours-page-play-btn-circle pu-tours-page-play-btn-mobile" id="playButtonMobile"
+                      role="button" aria-label="Play Tour Video">
+                      <svg width="40" height="40" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.4487 18.8018L48.9087 33.5011L23.4487 48.2004L23.4487 18.8018Z" fill="white" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Embedded YouTube Video Iframe Mobile -->
+                <iframe id="mobileIframe" class="pu-tours-page-mobile-youtube-player" src=""
+                  title="Parul University Mobile Tour Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tilted Right Side Card (0 space from right screen edge, tilted inward) -->
+          <div class="pu-tours-page-side-card pu-tours-page-side-card-right" id="sideCardRight" role="button"
+            tabindex="0" title="Click to view next tour">
+            <div class="pu-tours-page-side-card-slider" id="sideCardRightSlider">
+              <div class="pu-tours-page-side-card-face"
+                style="background-image: url('https://img.youtube.com/vi/urZTpngOKMU/maxresdefault.jpg');">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Edge Fade Gradient -->
+          <div class="pu-tours-page-edge-gradient-overlay pu-tours-page-edge-gradient-right" aria-hidden="true"></div>
+
+        </div>
+      </section>
+
+      <!-- Carousel Navigation Dots (Centered with Window) -->
+      <div class="pu-tours-page-tour-indicator-container" aria-label="Tour selector">
+        <div class="pu-tours-page-tour-indicator-window">
+          <div class="pu-tours-page-tour-indicator-track" id="dotsTrack">
+            <!-- Dots will be populated dynamically by script.js -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Banner -->
+    <footer class="pu-tours-page-bottom-banner-section">
+      <div class="pu-tours-page-bottom-banner-container">
+        <p class="pu-tours-page-bottom-banner-text">
+          <strong class="pu-tours-page-banner-highlight">Also searched as:</strong> industry tour, industrial visit,
+          practical exposure, industry exposure, experiential learning and hands-on learning. Parul University uses
+          Practical Learning Tour for its structured, documented format. 27 Tours in one academic year
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="bootstrap/bootstrap.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
