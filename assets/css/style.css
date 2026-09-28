@@ -1080,6 +1080,20 @@ img {
   justify-content: center;
   transition: opacity 0.3s ease;
 }
+
+/* Browse All Tours Button */
+.pu-tours-browse-all-btn {
+  background-color: #FFC900 !important;
+  color: #0F0445 !important;
+  font-size: 18px;
+  border-radius: 40px;
+  padding: 16px 40px !important;
+  font-family: var(--font-figtree-bold) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: none;
+}
+
+
 .pu-tours-why-arrows button:hover {
   opacity: 0.7;
 }
@@ -1219,11 +1233,14 @@ img {
 
 /* Evidence Card */
 .pu-tours-evidence-card {
-  background-color: #0b0230;
+  background-color: #0f0445;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(11, 2, 48, 0.2);
+  position: sticky;
+  top: 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 .pu-tours-evidence-pill {
   font-family: var(--font-figtree-bold);
   font-size: 13px;
@@ -1236,13 +1253,14 @@ img {
   background: #e9e9f1;
   color: #0F0445;
 }
+
 .pu-tours-evidence-card-title {
   font-family: var(--font-polymath-bold);
   font-size: 48px;
   color: #FFC900;
   line-height: 1.1;
-  letter-spacing: -0.5px;
 }
+
 .pu-tours-evidence-pill-small {
   background: #ffffff;
   color: #0F0445;
@@ -1251,6 +1269,7 @@ img {
   padding: 8px 16px;
   border-radius: 6px;
 }
+
 .pu-tours-logo-box {
   background: #ffffff;
   border-radius: 6px;
@@ -1307,3 +1326,114 @@ img {
   min-height: 300px;
 }
 
+
+
+/* ============ CAREERS SECTION ============ */
+.pu-tours-careers-section {
+  background-color: #f7f7fa;
+}
+
+.pu-tours-text-gradient-purple {
+  background: linear-gradient(90deg, #7E3DF2 0%, #9D44B5 40%, #c91763 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pu-tours-career-card {
+  border-radius: 12px;
+  padding: 40px;
+  border: 2px solid transparent;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(90deg, #B53C72 0%, #5641E0 100%) border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pu-tours-career-card-title {
+  font-family: var(--font-figtree-bold);
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #c91763 0%, #7E3DF2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.pu-tours-career-card-text {
+  font-family: var(--font-figtree-regular);
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.pu-tours-logo-box-bordered {
+  border: 1px solid #eaeaea;
+}
+
+.pu-tours-career-stat-number {
+  font-family: var(--font-figtree-bold);
+  font-size: 24px;
+  color: #c91763;
+}
+
+.pu-tours-career-stat-label {
+  font-family: var(--font-figtree-regular);
+  font-size: 14px;
+  color: #666;
+}
+
+.pu-tours-career-pill {
+  font-family: var(--font-figtree-regular);
+  font-size: 13px;
+  border: 1px dashed rgba(164, 69, 178, 0.6);
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #c91763 0%, #7E3DF2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pu-tours-career-stats-box {
+  border: 1px dashed rgba(164, 69, 178, 0.6);
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.pu-tours-career-yellow-btn {
+  padding: 10px 24px !important;
+  background-color: #FFC900;
+  color: #0F0445;
+  border-radius: 40px;
+  font-family: var(--font-figtree-bold);
+  font-size: 14px;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.pu-tours-careers-eyebrow {
+  font-family: var(--font-figtree-bold);
+  color: #0F0445;
+  font-size: 28px;
+}
+
+.pu-tours-careers-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 56px;
+  color: #0F0445;
+  line-height: 1.1;
+}
+
+.pu-tours-careers-desc {
+  font-family: var(--font-figtree-regular);
+  font-size: 18px;
+  color: #333;
+}
+
+.pu-tours-logo-box-gray-bg {
+  background: linear-gradient(#e9e9f1, #e9e9f1) padding-box,
+              linear-gradient(90deg, #B53C72 0%, #5641E0 100%) border-box;
+}
