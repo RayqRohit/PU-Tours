@@ -688,177 +688,179 @@ img {
    STUDENT MOBILITY - STATS BAR
    ========================================================================== */
 .student-mobility-stats-section {
-    background-color: #0f0445;
-    padding: 40px 0;
-    border-top: 10px solid #5C46E5;
+  background-color: #0f0445;
+  padding: 40px 0;
+  border-top: 10px solid #5C46E5;
 }
 
 .student-mobility-stats-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .student-mobility-stat-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .student-mobility-stat-num {
-    font-family: var(--font-polymath-bold);
-    font-weight: 700;
-    font-size: 64px;
-    color: #FFC900;
-    line-height: 1;
-    letter-spacing: 2px;
+  font-family: var(--font-polymath-bold);
+  font-weight: 700;
+  font-size: 64px;
+  color: #FFC900;
+  line-height: 1;
+  letter-spacing: 2px;
 }
 
 .student-mobility-stat-text {
-    font-family: var(--font-figtree-regular);
-    font-weight: 400;
-    font-size: 20px;
-    color: #ffffff;
-    line-height: 1.2;
+  font-family: var(--font-figtree-regular);
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 1.2;
 }
 
 .student-mobility-stat-dot {
-    width: 10px;
-    height: 10px;
-    background-color: #a4a4a4;
-    border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #a4a4a4;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 991px) {
-    .student-mobility-stats-section {
-        padding: 40px 20px;
-        border-top: 5px solid #FFC900;
-        border-bottom: 5px solid #FFC900;
-    }
+  .student-mobility-stats-section {
+    padding: 40px 20px;
+    border-top: 5px solid #FFC900;
+    border-bottom: 5px solid #FFC900;
+  }
 
-    .student-mobility-stats-bar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 15px;
-    }
+  .student-mobility-stats-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
 
-    .student-mobility-stat-dot {
-        display: none !important;
-    }
+  .student-mobility-stat-dot {
+    display: none !important;
+  }
 
-    .student-mobility-stat-item {
-        justify-content: center;
-        text-align: center;
-    }
+  .student-mobility-stat-item {
+    justify-content: center;
+    text-align: center;
+  }
 
-    .student-mobility-stat-item:nth-child(1) {
-        position: relative;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-        align-self: center;
-    }
+  .student-mobility-stat-item:nth-child(1) {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    align-self: center;
+  }
 
-    .student-mobility-stat-item:nth-child(1)::before {
-        content: '';
-        background: url('../images/stats/left-wing.svg') no-repeat center/contain;
-        width: 35px;
-        height: 70px;
-        position: absolute;
-        left: -40px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+  .student-mobility-stat-item:nth-child(1)::before {
+    content: '';
+    background: url('../images/stats/left-wing.svg') no-repeat center/contain;
+    width: 35px;
+    height: 70px;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    .student-mobility-stat-item:nth-child(1)::after {
-        content: '';
-        background: url('../images/stats/right-wing.svg') no-repeat center/contain;
-        width: 35px;
-        height: 70px;
-        position: absolute;
-        right: -40px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+  .student-mobility-stat-item:nth-child(1)::after {
+    content: '';
+    background: url('../images/stats/right-wing.svg') no-repeat center/contain;
+    width: 35px;
+    height: 70px;
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    .student-mobility-stat-item:nth-child(1) .student-mobility-stat-num {
-        color: #ffffff;
-        font-size: 56px;
-        font-weight: 700;
-    }
+  .student-mobility-stat-item:nth-child(1) .student-mobility-stat-num {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 700;
+  }
 
-    .student-mobility-stat-item:not(:nth-child(1)) {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 50px;
-        padding: 12px 20px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-    }
+  .student-mobility-stat-item:not(:nth-child(1)) {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
 
-    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-num {
-        font-size: 24px;
-        font-weight: 700;
-        color: #FFC900;
-    }
+  .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-num {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFC900;
+  }
 
-    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text {
-        font-size: 15px;
-        font-weight: 400;
-        text-align: left;
-        color: #ffffff;
-    }
+  .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    color: #ffffff;
+  }
 
-    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text br {
-        display: none;
-    }
+  .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text br {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .student-mobility-stat-item:nth-child(1) .student-mobility-stat-num {
-        font-size: 60px;
-    }
-    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-num {
-        font-size: 28px;
-    }
-    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text {
-        font-size: 17px;
-    }
+  .student-mobility-stat-item:nth-child(1) .student-mobility-stat-num {
+    font-size: 60px;
+  }
+
+  .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-num {
+    font-size: 28px;
+  }
+
+  .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text {
+    font-size: 17px;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1399px) {
-    .student-mobility-stat-num {
-        font-size: 48px;
-        font-weight: 700;
-    }
-    .student-mobility-stat-text {
-        font-size: 16px;
-        font-weight: 400;
-    }
+  .student-mobility-stat-num {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .student-mobility-stat-text {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 767.98px) {
-    .student-mobility-stat-item:not(:nth-child(1)) {
-        position: relative;
-    }
-    .student-mobility-stat-item:not(:nth-child(1))::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 8%;
-        right: 8%;
-        height: 1px;
-        background: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.65) 50%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        pointer-events: none;
-    }
+  .student-mobility-stat-item:not(:nth-child(1)) {
+    position: relative;
+  }
+
+  .student-mobility-stat-item:not(:nth-child(1))::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.65) 50%,
+        rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+  }
 }
 
 /* ============ WHAT IS SECTION ============ */
@@ -901,13 +903,13 @@ img {
 
 .pu-tours-what-is-card {
   background: #ffffff;
-   border: 2px solid rgba(143, 143, 143, 0.5);
+  border: 2px solid rgba(143, 143, 143, 0.5);
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .pu-tours-what-is-card:hover {
-  box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
   border-color: #d96791;
 }
 
@@ -1055,6 +1057,7 @@ img {
 .pu-tours-why-slider .slick-track {
   display: flex;
 }
+
 .pu-tours-why-slider .slick-slide {
   height: auto;
 }
@@ -1064,6 +1067,7 @@ img {
   background-color: #0F0445;
   width: 100%;
 }
+
 .pu-tours-why-progress-bar {
   height: 100%;
   background-color: #FFC900;
@@ -1089,7 +1093,7 @@ img {
   border-radius: 40px;
   padding: 16px 40px !important;
   font-family: var(--font-figtree-bold) !important;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: none;
 }
 
@@ -1097,6 +1101,7 @@ img {
 .pu-tours-why-arrows button:hover {
   opacity: 0.7;
 }
+
 .pu-tours-why-arrows button.slick-disabled {
   opacity: 0.3;
   cursor: not-allowed;
@@ -1119,7 +1124,10 @@ img {
 .pu-tours-process-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 12px;
   padding: 2px;
   background: linear-gradient(135deg, #c74b88 0%, #7655d9 100%);
@@ -1157,11 +1165,13 @@ img {
 .pu-tours-evidence-section {
   padding-block: 90px !important;
 }
+
 .pu-tours-evidence-kicker {
   font-family: var(--font-figtree-bold);
   font-size: 28px;
   color: #0F0445;
 }
+
 .pu-tours-evidence-title {
   font-family: var(--font-polymath-bold);
   font-size: 52px;
@@ -1169,6 +1179,7 @@ img {
   line-height: 1.1;
   letter-spacing: -0.5px;
 }
+
 .pu-tours-evidence-desc {
   font-family: var(--font-figtree-regular);
   font-size: 18px;
@@ -1182,18 +1193,21 @@ img {
   border: 1px solid #e8e8e8;
   border-radius: 12px;
   padding: 12px 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
+
 .pu-tours-search-wrapper {
   position: relative;
   min-width: 250px;
 }
+
 .pu-tours-search-icon {
   position: absolute;
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
 }
+
 .pu-tours-search-input {
   padding-left: 40px;
   border: none;
@@ -1202,9 +1216,11 @@ img {
   font-family: var(--font-figtree-regular);
   font-size: 17px;
 }
+
 .pu-tours-search-input::placeholder {
   color: #999;
 }
+
 .pu-tours-filter-btn {
   font-family: var(--font-figtree-bold);
   font-size: 16px;
@@ -1213,14 +1229,17 @@ img {
   border: 1px solid transparent;
   color: #0F0445;
 }
+
 .pu-tours-filter-btn.active {
   background-color: #0F0445;
   color: #FFC900;
 }
+
 .pu-tours-filter-btn:not(.active) {
   border-color: #e8e8e8;
   background: #fff;
 }
+
 .pu-tours-faculty-select {
   font-family: var(--font-figtree-bold);
   font-size: 16px;
@@ -1249,6 +1268,7 @@ img {
   border-radius: 20px;
   text-transform: uppercase;
 }
+
 .pu-tours-evidence-pill-light {
   background: #e9e9f1;
   color: #0F0445;
@@ -1272,7 +1292,7 @@ img {
 
 .pu-tours-logo-box {
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: 15px;
   height: 55px;
   min-width: 55px;
   display: flex;
@@ -1280,20 +1300,24 @@ img {
   justify-content: center;
   padding: 0 16px;
 }
+
 .pu-tours-logo-box img {
   max-height: 32px;
   max-width: 90px;
   object-fit: contain;
 }
+
 .pu-tours-logo-box-text {
   font-family: var(--font-figtree-semibold);
   font-size: 15px;
   color: #0F0445;
 }
+
 .pu-tours-evidence-faculty {
   font-family: var(--font-figtree-bold);
   font-size: 22px;
 }
+
 .pu-tours-btn-film {
   background: #ffffff;
   color: #0F0445;
@@ -1302,31 +1326,33 @@ img {
   font-family: var(--font-figtree-bold);
   font-size: 16px;
 }
+
 .pu-tours-btn-film:hover {
   background: #f0f0f0;
   color: #0F0445;
 }
+
 .pu-tours-btn-story {
   background: transparent;
   color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   padding: 8px 24px;
   font-family: var(--font-figtree-bold);
   font-size: 16px;
 }
+
 .pu-tours-btn-story:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
+
 .pu-tours-evidence-video-wrapper {
   border-radius: 12px;
   overflow: hidden;
   height: 100%;
   min-height: 300px;
 }
-
-
 
 /* ============ CAREERS SECTION ============ */
 .pu-tours-careers-section {
@@ -1345,7 +1371,7 @@ img {
   padding: 40px;
   border: 2px solid transparent;
   background: linear-gradient(#ffffff, #ffffff) padding-box,
-              linear-gradient(90deg, #B53C72 0%, #5641E0 100%) border-box;
+    linear-gradient(90deg, #B53C72 0%, #5641E0 100%) border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1413,6 +1439,13 @@ img {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.pu-tours-career-yellow-btn:hover,
+.pu-tours-career-yellow-btn:focus,
+.pu-tours-career-yellow-btn:active {
+  background-color: #FFC900 !important;
+  color: #0F0445 !important;
+  border-color: transparent !important;
+}
 
 .pu-tours-careers-eyebrow {
   font-family: var(--font-figtree-bold);
@@ -1435,5 +1468,337 @@ img {
 
 .pu-tours-logo-box-gray-bg {
   background: linear-gradient(#e9e9f1, #e9e9f1) padding-box,
-              linear-gradient(90deg, #B53C72 0%, #5641E0 100%) border-box;
+    linear-gradient(90deg, #B53C72 0%, #5641E0 100%) border-box;
+}
+
+/* -----------------------------------------
+   Leadership Spotlight Section
+----------------------------------------- */
+.pu-tours-leadership-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.pu-tours-leadership-eyebrow {
+  color: #0F0445;
+  font-family: var(--font-figtree-bold);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.pu-tours-leadership-main-title {
+  font-size: 56px;
+  color: #0F0445;
+  font-family: var(--font-polymath-bold);
+  margin-top: 5px;
+  font-weight: 800;
+  line-height: 1.1;
+   max-width: 1050px;
+}
+
+.pu-tours-leadership-subtitle {
+  font-size: 18px;
+  font-family: var(--font-figtree-regular);
+  color: #333;
+  max-width: 1000px;
+  margin: 15px 0 30px 0;
+}
+
+.pu-tours-leadership-slider {
+  margin-top: 50px;
+}
+
+.pu-tours-leadership-slider .slick-track {
+  display: flex !important;
+}
+
+.pu-tours-leadership-slider .slick-slide {
+  height: auto !important;
+  float: none !important;
+}
+
+.pu-tours-leadership-slider .slick-slide > div {
+  height: 100%;
+}
+
+.pu-tours-leadership-slide {
+  padding: 0 12px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pu-tours-leadership-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pu-tours-leadership-img-wrapper {
+  position: relative;
+  height: 260px;
+  width: 100%;
+}
+
+.pu-tours-leadership-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pu-tours-leadership-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.pu-tours-official-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #FFC900;
+  color: #111;
+  font-family: var(--font-figtree-bold);
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.pu-tours-leadership-name-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  z-index: 2;
+}
+
+.pu-tours-leadership-name-overlay small {
+  font-size: 11px;
+  color: #ddd;
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--font-figtree-regular);
+}
+
+.pu-tours-leadership-name-overlay .leader-name {
+  color: #FFC900;
+  font-size: 16px;
+  font-family: var(--font-figtree-bold);
+}
+
+.pu-tours-leadership-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pu-tours-leadership-meta {
+  font-size: 12px;
+  color: #0F0445;
+  font-family: var(--font-figtree-bold);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pu-tours-leadership-tour-name {
+  font-size: 24px;
+  background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: var(--font-figtree-bold);
+  margin-bottom: 10px;
+}
+
+.pu-tours-leadership-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-family: var(--font-figtree-regular);
+}
+
+.pu-tours-speaker-slider {
+  margin-bottom: 5px;
+}
+
+.pu-tours-leadership-speaker {
+  display: flex !important;
+  align-items: center;
+  padding: 15px;
+  border: 2px dashed #eaeaea;
+  border-radius: 8px;
+}
+
+.pu-tours-leadership-speaker .speaker-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-figtree-bold);
+  font-size: 18px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  background-color: #0F0445;
+  color: transparent;
+}
+
+.pu-tours-leadership-speaker .speaker-info {
+  flex-grow: 1;
+}
+
+.pu-tours-leadership-speaker .speaker-name {
+  background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 16px;
+  font-family: var(--font-figtree-bold);
+  margin: 0 0 2px 0;
+}
+
+.pu-tours-leadership-speaker .speaker-role {
+  font-size: 13px;
+  color: #0F0445;
+  font-family: var(--font-figtree-bold);
+  margin: 0;
+}
+
+.pu-tours-speaker-slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pu-tours-speaker-slider .slick-dots li {
+  margin: 0;
+}
+
+.pu-tours-speaker-slider .slick-dots li button {
+  width: 12px;
+  height: 4px;
+  background-color: #eee;
+  border-radius: 2px;
+  padding: 0;
+  border: none;
+  font-size: 0;
+  color: transparent;
+  outline: none;
+}
+
+.pu-tours-speaker-slider .slick-dots li.slick-active button {
+  background-color: #FFC900;
+}
+
+.pu-tours-leadership-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.pu-tours-leadership-actions .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-family: var(--font-figtree-bold);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pu-tours-leadership-btn-icon {
+  margin-right: 5px;
+}
+
+.pu-tours-leadership-actions .btn-watch-youtube {
+  background-color: #0F0445;
+  color: #fff;
+  border: none;
+}
+.pu-tours-leadership-actions .btn-watch-youtube:hover {
+  background-color: #1a0b63;
+  color: #fff;
+}
+
+.pu-tours-leadership-actions .btn-read-story {
+  background-color: #fff;
+  color: #0F0445;
+  border: 1px solid #0F0445;
+}
+.pu-tours-leadership-actions .btn-read-story:hover {
+  background-color: #0F0445;
+  color: #fff;
+}
+
+/* Slider Nav */
+.pu-tours-leadership-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 0 15px;
+}
+
+.pu-tours-leadership-progress-container {
+  flex-grow: 1;
+  height: 3px;
+  background-color: #0F0445;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+.pu-tours-leadership-progress-bar {
+  height: 100%;
+  background-color: #FFC900;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.pu-tours-leadership-arrows {
+  display: flex;
+  gap: 15px;
+}
+
+.pu-tours-leadership-arrows .btn {
+  width: auto;
+  height: auto;
+  border: none;
+  background: transparent;
+  color: #0F0445;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+.pu-tours-leadership-arrows .btn:hover {
+  background: transparent;
+  opacity: 0.7;
+}
+.pu-tours-leadership-arrows .btn.slick-disabled {
+  color: #ccc;
+  cursor: not-allowed;
 }

@@ -280,6 +280,65 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProgress(slider.slick('getSlick'), 0);
       }
     }
+
+    // ---- Leadership Spotlight Slick Slider ----
+    const leadershipSlider = jQuery('.pu-tours-leadership-slider');
+    const leadershipProgressBar = jQuery('#leadershipProgressBar');
+
+    if (leadershipSlider.length) {
+      function updateLeadershipProgress(slick, nextSlide) {
+        let maxSlide = slick.slideCount - slick.options.slidesToShow;
+        let calc = 100;
+        if (maxSlide > 0) {
+          calc = ((nextSlide + 1) / (maxSlide + 1)) * 100;
+        }
+        leadershipProgressBar.css('width', calc + '%');
+      }
+
+      leadershipSlider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        // Only update progress for the main slider, ignore nested sliders
+        if (event.target !== event.currentTarget) return;
+        updateLeadershipProgress(slick, nextSlide);
+      });
+
+      leadershipSlider.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: jQuery('.pu-tours-leadership-prev'),
+        nextArrow: jQuery('.pu-tours-leadership-next'),
+        infinite: false,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      if (leadershipSlider.slick('getSlick').slideCount) {
+        updateLeadershipProgress(leadershipSlider.slick('getSlick'), 0);
+      }
+      
+      // Initialize nested speaker slider for each card
+      jQuery('.pu-tours-speaker-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        infinite: true
+      });
+    }
   }
 
   // ---- Evidence Directory Logos Show More ----
