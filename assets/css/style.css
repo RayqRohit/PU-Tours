@@ -630,5 +630,680 @@ img {
 }
 
 .pu-tours-bottom-banner p {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
+
+/* ============ HIGHLIGHTS SECTION ============ */
+.pu-tours-highlights-section {
+  font-family: var(--font-figtree-regular);
+}
+
+.pu-tours-highlights-desc {
+  font-size: 1.05rem;
+  color: #4a4a4a;
+}
+
+.pu-tours-text-pink {
+  color: #c75b8a;
+}
+
+.pu-tours-highlight-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+}
+
+.pu-tours-highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #d96791 0%, #7155d9 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.pu-tours-highlight-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.pu-tours-highlight-title {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   STUDENT MOBILITY - STATS BAR
+   ========================================================================== */
+.student-mobility-stats-section {
+    background-color: #0f0445;
+    padding: 40px 0;
+    border-top: 10px solid #5C46E5;
+}
+
+.student-mobility-stats-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.student-mobility-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.student-mobility-stat-num {
+    font-family: var(--font-polymath-bold);
+    font-weight: 700;
+    font-size: 64px;
+    color: #FFC900;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.student-mobility-stat-text {
+    font-family: var(--font-figtree-regular);
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.student-mobility-stat-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #a4a4a4;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 991px) {
+    .student-mobility-stats-section {
+        padding: 40px 20px;
+        border-top: 5px solid #FFC900;
+        border-bottom: 5px solid #FFC900;
+    }
+
+    .student-mobility-stats-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .student-mobility-stat-dot {
+        display: none !important;
+    }
+
+    .student-mobility-stat-item {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .student-mobility-stat-item:nth-child(1) {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+
+    .student-mobility-stat-item:nth-child(1)::before {
+        content: '';
+        background: url('../images/stats/left-wing.svg') no-repeat center/contain;
+        width: 35px;
+        height: 70px;
+        position: absolute;
+        left: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .student-mobility-stat-item:nth-child(1)::after {
+        content: '';
+        background: url('../images/stats/right-wing.svg') no-repeat center/contain;
+        width: 35px;
+        height: 70px;
+        position: absolute;
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .student-mobility-stat-item:nth-child(1) .student-mobility-stat-num {
+        color: #ffffff;
+        font-size: 56px;
+        font-weight: 700;
+    }
+
+    .student-mobility-stat-item:not(:nth-child(1)) {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        padding: 12px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-num {
+        font-size: 24px;
+        font-weight: 700;
+        color: #FFC900;
+    }
+
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text {
+        font-size: 15px;
+        font-weight: 400;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text br {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .student-mobility-stat-item:nth-child(1) .student-mobility-stat-num {
+        font-size: 60px;
+    }
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-num {
+        font-size: 28px;
+    }
+    .student-mobility-stat-item:not(:nth-child(1)) .student-mobility-stat-text {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+    .student-mobility-stat-num {
+        font-size: 48px;
+        font-weight: 700;
+    }
+    .student-mobility-stat-text {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .student-mobility-stat-item:not(:nth-child(1)) {
+        position: relative;
+    }
+    .student-mobility-stat-item:not(:nth-child(1))::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 8%;
+        right: 8%;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.65) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        pointer-events: none;
+    }
+}
+
+/* ============ WHAT IS SECTION ============ */
+.pu-tours-what-is-section {
+  padding-block: 90px !important;
+}
+
+.pu-tours-what-is-kicker {
+  font-family: var(--font-figtree-bold);
+  font-size: 28px;
+  color: #0F0445;
+}
+
+.pu-tours-what-is-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 56px;
+  color: #0F0445;
+  line-height: 1.1;
+}
+
+.pu-tours-text-gradient-pink {
+  background: linear-gradient(90deg, #c74b88 0%, #7655d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.pu-tours-what-is-desc {
+  font-family: var(--font-figtree-regular);
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.pu-tours-what-is-desc strong {
+  font-family: var(--font-figtree-semibold);
+  color: #0F0445;
+}
+
+.pu-tours-what-is-card {
+  background: #ffffff;
+   border: 2px solid rgba(143, 143, 143, 0.5);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.pu-tours-what-is-card:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+  border-color: #d96791;
+}
+
+.pu-tours-what-is-number {
+  background: #dbdbdb;
+  color: #0F0445;
+  font-family: var(--font-figtree-bold);
+  font-size: 15px;
+  width: 40px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pu-tours-what-is-card-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.pu-tours-what-is-card-text {
+  font-family: var(--font-figtree-regular);
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* ============ WHY IT MATTERS SECTION ============ */
+.pu-tours-why-it-matters-section {
+  background-color: #f7f7fa;
+  padding: 90px 0 40px 0 !important;
+}
+
+.pu-tours-why-kicker {
+  font-family: var(--font-figtree-bold);
+  font-size: 28px;
+  color: #0F0445;
+}
+
+.pu-tours-why-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 52px;
+  color: #0F0445;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  max-width: 750px;
+}
+
+.pu-tours-why-desc {
+  font-family: var(--font-figtree-regular);
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Card Styling */
+.pu-tours-why-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 480px;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0F0445;
+}
+
+.pu-tours-why-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.pu-tours-why-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(15, 4, 69, 0) 0%, rgba(15, 4, 69, 0) 25%, #0F0445 60%);
+  z-index: 1;
+}
+
+.pu-tours-why-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.pu-tours-why-card-number {
+  background: #FFC900;
+  color: #0F0445;
+  font-family: var(--font-polymath-bold);
+  font-size: 15px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  line-height: 1;
+}
+
+.pu-tours-why-card-badge {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-family: var(--font-figtree-semibold);
+  font-size: 13px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.pu-tours-why-card-title {
+  color: #FFC900 !important;
+  font-family: var(--font-polymath-bold);
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.pu-tours-why-card-text {
+  font-family: var(--font-figtree-regular);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+/* Slick slider custom controls */
+.pu-tours-why-slider {
+  margin-bottom: 0;
+}
+
+.pu-tours-why-slider .slick-list {
+  margin: 0 -12px;
+}
+
+.pu-tours-why-slider .slick-track {
+  display: flex;
+}
+.pu-tours-why-slider .slick-slide {
+  height: auto;
+}
+
+.pu-tours-why-progress-container {
+  height: 3px;
+  background-color: #0F0445;
+  width: 100%;
+}
+.pu-tours-why-progress-bar {
+  height: 100%;
+  background-color: #FFC900;
+  transition: width 0.3s ease;
+}
+
+.pu-tours-why-arrows button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.pu-tours-why-arrows button:hover {
+  opacity: 0.7;
+}
+.pu-tours-why-arrows button.slick-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ============ PROCESS SECTION ============ */
+.pu-tours-process-section {
+  background-color: #f7f7fa;
+  padding-bottom: 90px;
+}
+
+.pu-tours-process-card {
+  position: relative;
+  padding: 40px 32px;
+  height: 100%;
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.pu-tours-process-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #c74b88 0%, #7655d9 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.pu-tours-process-badge {
+  display: inline-block;
+  background-color: #e6e6ec;
+  color: #0F0445;
+  font-family: var(--font-figtree-bold);
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.pu-tours-process-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.pu-tours-process-desc {
+  font-family: var(--font-figtree-regular);
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ============ EVIDENCE DIRECTORY SECTION ============ */
+.pu-tours-evidence-section {
+  padding-block: 90px !important;
+}
+.pu-tours-evidence-kicker {
+  font-family: var(--font-figtree-bold);
+  font-size: 28px;
+  color: #0F0445;
+}
+.pu-tours-evidence-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 52px;
+  color: #0F0445;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.pu-tours-evidence-desc {
+  font-family: var(--font-figtree-regular);
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Filters Bar */
+.pu-tours-filters-bar {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+.pu-tours-search-wrapper {
+  position: relative;
+  min-width: 250px;
+}
+.pu-tours-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pu-tours-search-input {
+  padding-left: 40px;
+  border: none;
+  background: transparent;
+  box-shadow: none !important;
+  font-family: var(--font-figtree-regular);
+  font-size: 17px;
+}
+.pu-tours-search-input::placeholder {
+  color: #999;
+}
+.pu-tours-filter-btn {
+  font-family: var(--font-figtree-bold);
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  color: #0F0445;
+}
+.pu-tours-filter-btn.active {
+  background-color: #0F0445;
+  color: #FFC900;
+}
+.pu-tours-filter-btn:not(.active) {
+  border-color: #e8e8e8;
+  background: #fff;
+}
+.pu-tours-faculty-select {
+  font-family: var(--font-figtree-bold);
+  font-size: 16px;
+  padding: 10px 36px 10px 16px;
+  border-color: #e8e8e8;
+  border-radius: 6px;
+  color: #0F0445;
+  min-width: 150px;
+}
+
+/* Evidence Card */
+.pu-tours-evidence-card {
+  background-color: #0b0230;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(11, 2, 48, 0.2);
+}
+.pu-tours-evidence-pill {
+  font-family: var(--font-figtree-bold);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.pu-tours-evidence-pill-light {
+  background: #e9e9f1;
+  color: #0F0445;
+}
+.pu-tours-evidence-card-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 48px;
+  color: #FFC900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.pu-tours-evidence-pill-small {
+  background: #ffffff;
+  color: #0F0445;
+  font-family: var(--font-figtree-bold);
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+.pu-tours-logo-box {
+  background: #ffffff;
+  border-radius: 6px;
+  height: 55px;
+  min-width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+.pu-tours-logo-box img {
+  max-height: 32px;
+  max-width: 90px;
+  object-fit: contain;
+}
+.pu-tours-logo-box-text {
+  font-family: var(--font-figtree-semibold);
+  font-size: 15px;
+  color: #0F0445;
+}
+.pu-tours-evidence-faculty {
+  font-family: var(--font-figtree-bold);
+  font-size: 22px;
+}
+.pu-tours-btn-film {
+  background: #ffffff;
+  color: #0F0445;
+  border-radius: 30px;
+  padding: 8px 24px;
+  font-family: var(--font-figtree-bold);
+  font-size: 16px;
+}
+.pu-tours-btn-film:hover {
+  background: #f0f0f0;
+  color: #0F0445;
+}
+.pu-tours-btn-story {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 30px;
+  padding: 8px 24px;
+  font-family: var(--font-figtree-bold);
+  font-size: 16px;
+}
+.pu-tours-btn-story:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.pu-tours-evidence-video-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 300px;
+}
+

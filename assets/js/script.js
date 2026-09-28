@@ -232,4 +232,147 @@ document.addEventListener('DOMContentLoaded', () => {
     $(playId)?.addEventListener('click', e => { e.stopPropagation(); startVideo(); });
     $(thumbId)?.addEventListener('click', () => { if (!isVideoPlaying) startVideo(); });
   });
+
+  // ---- Why It Matters Slick Slider ----
+  if (typeof jQuery !== 'undefined') {
+    const slider = jQuery('.pu-tours-why-slider');
+    const progressBar = jQuery('#whyProgressBar');
+
+    if (slider.length) {
+      function updateProgress(slick, nextSlide) {
+        // slick.options.slidesToShow safely gives the current active slidesToShow
+        let maxSlide = slick.slideCount - slick.options.slidesToShow;
+        let calc = 100; // default to 100% if no scrolling is possible
+        if (maxSlide > 0) {
+          calc = ((nextSlide + 1) / (maxSlide + 1)) * 100;
+        }
+        progressBar.css('width', calc + '%');
+      }
+
+      slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        updateProgress(slick, nextSlide);
+      });
+
+      slider.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: jQuery('.pu-tours-why-prev'),
+        nextArrow: jQuery('.pu-tours-why-next'),
+        infinite: false,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+
+      if (slider.slick('getSlick').slideCount) {
+        updateProgress(slider.slick('getSlick'), 0);
+      }
+    }
+  }
+
+  // ---- Evidence Directory Logos Show More ----
+  if (typeof jQuery !== 'undefined') {
+    jQuery(document).on('click', '.pu-tours-show-more-logos', function () {
+      // Find the parent container
+      const container = jQuery(this).closest('.pu-tours-evidence-logos');
+      // Show the hidden logos
+      container.find('.pu-tours-hidden-logo').removeClass('d-none');
+      // Hide the "more" button itself
+      jQuery(this).addClass('d-none');
+    });
+  }
+
+  // ---- Evidence Directory Filtering ----
+  const cards = Array.from(document.querySelectorAll('.tour-card'));
+  const typeButtons = Array.from(document.querySelectorAll('.pu-tours-filter-btn'));
+  const facultySelect = document.getElementById('faculty-filter');
+  const searchInput = document.getElementById('tour-search');
+  
+  const viewAllBtn = document.getElementById('view-all-tours-btn');
+  const viewAllContainer = document.getElementById('view-all-tours-container');
+  
+  let activeType = 'all';
+  let showingAll = false;
+
+  if (cards.length > 0 && facultySelect && searchInput) {
+    const applyFilters = () => {
+      const query = searchInput.value.trim().toLowerCase();
+      const faculty = facultySelect.value;
+      
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const typeMatch = activeType === 'all' || card.dataset.type === activeType;
+        const facultyMatch = faculty === 'all' || card.dataset.faculty === faculty;
+
+        let searchMatch = true;
+        if (query) {
+          searchMatch = (card.dataset.search || '').includes(query);
+        }
+
+        const show = typeMatch && facultyMatch && searchMatch;
+
+        if (show) {
+          visibleCount++;
+          if (!showingAll && visibleCount > 6) {
+             card.style.setProperty('display', 'none', 'important');
+          } else {
+             card.style.setProperty('display', 'block', 'important');
+          }
+        } else {
+          card.style.setProperty('display', 'none', 'important');
+        }
+      });
+      
+      if (viewAllContainer) {
+        if (!showingAll && visibleCount > 6) {
+           viewAllContainer.style.setProperty('display', 'block', 'important');
+        } else {
+           viewAllContainer.style.setProperty('display', 'none', 'important');
+        }
+      }
+    };
+
+    typeButtons.forEach(button => button.addEventListener('click', () => {
+      activeType = button.dataset.filter;
+      typeButtons.forEach(item => {
+        const selected = item === button;
+        item.classList.toggle('active', selected);
+      });
+      showingAll = false;
+      applyFilters();
+    }));
+
+    searchInput.addEventListener('input', () => {
+       showingAll = false;
+       applyFilters();
+    });
+    facultySelect.addEventListener('change', () => {
+       showingAll = false;
+       applyFilters();
+    });
+    
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', () => {
+            showingAll = true;
+            applyFilters();
+        });
+    }
+    
+    // Initial setup
+    applyFilters();
+  }
+
 });
