@@ -1495,7 +1495,7 @@ img {
   margin-top: 5px;
   font-weight: 800;
   line-height: 1.1;
-   max-width: 1050px;
+  max-width: 1050px;
 }
 
 .pu-tours-leadership-subtitle {
@@ -1519,7 +1519,7 @@ img {
   float: none !important;
 }
 
-.pu-tours-leadership-slider .slick-slide > div {
+.pu-tours-leadership-slider .slick-slide>div {
   height: 100%;
 }
 
@@ -1559,7 +1559,7 @@ img {
   left: 0;
   width: 100%;
   height: 60%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
 .pu-tours-official-tag {
@@ -1645,7 +1645,7 @@ img {
   height: auto;
 }
 
-.pu-tours-speaker-slider .slick-slide > div {
+.pu-tours-speaker-slider .slick-slide>div {
   height: 100%;
 }
 
@@ -1698,7 +1698,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 6px;
-      margin: 3px 0 10px 0;
+  margin: 3px 0 10px 0;
   padding: 0;
   list-style: none;
 }
@@ -1752,6 +1752,7 @@ img {
   color: #fff;
   border: none;
 }
+
 .pu-tours-leadership-actions .btn-watch-youtube:hover {
   background-color: #1a0b63;
   color: #fff;
@@ -1762,6 +1763,7 @@ img {
   color: #0F0445;
   border: 1px solid #0F0445;
 }
+
 .pu-tours-leadership-actions .btn-read-story:hover {
   background-color: #0F0445;
   color: #fff;
@@ -1808,11 +1810,214 @@ img {
   padding: 0;
   transition: all 0.2s ease;
 }
+
 .pu-tours-leadership-arrows .btn:hover {
   background: transparent;
   opacity: 0.7;
 }
+
 .pu-tours-leadership-arrows .btn.slick-disabled {
   color: #ccc;
   cursor: not-allowed;
+}
+
+/* Organizations Section */
+.pu-tours-organizations-section {
+  background-color: #F8F8F9;
+  font-family: var(--font-figtree-regular);
+}
+
+.pu-tours-org-eyebrow {
+  color: #0F0445;
+  font-size: 28px;
+  font-family: var(--font-figtree-bold);
+}
+
+.pu-tours-org-title {
+  color: #929292;
+  font-size: 56px;
+  letter-spacing: -0.5px;
+  font-family: var(--font-polymath-bold);
+  line-height: 1.2;
+}
+
+.pu-tours-org-gradient {
+  background: linear-gradient(90deg, #B53C72 0%, #5641E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pu-tours-org-lead {
+  max-width: 900px;
+  color: #2C2C2C;
+  font-size: 20px;
+  font-family: var(--font-figtree-medium);
+  margin: 15px 0 2rem 0;
+}
+
+.pu-tours-org-btn {
+  background-color: transparent;
+  color: #0F0445;
+  border: 1px solid #0F0445;
+  font-size: 18px;
+  padding: 12px 24px;
+  font-family: var(--font-figtree-bold);
+  transition: all 0.3s ease;
+}
+
+.pu-tours-org-btn.active,
+.pu-tours-org-btn:hover {
+  background-color: #0F0445;
+  color: white;
+}
+
+.pu-tours-org-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.pu-tours-org-grid-item {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.pu-tours-org-grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pu-tours-org-cta {
+  background-color: #ffc107;
+  color: #0F0445;
+  border: none;
+  font-size: 17px;
+  font-family: var(--font-figtree-bold);
+  transition: all 0.3s ease;
+}
+
+.pu-tours-org-cta:hover {
+  background-color: #e0a800;
+  color: #0F0445;
+}
+
+.pu-tours-org-footer-text {
+  font-size: 16px;
+  color: #2c2c2c;
+  font-family: var(--font-figtree-regular);
+}
+
+.pu-tours-org-footer-text strong {
+  color: #000;
+  font-family: var(--font-figtree-bold);
+}
+
+@media (max-width: 991px) {
+  .pu-tours-org-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pu-tours-org-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .pu-tours-org-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============ VIDEO EXPOSURE SECTION ============ */
+.pu-tours-video-exposure-section {
+  background-color: #0F0445;
+}
+.pu-tours-video-exposure-eyebrow {
+  font-family: var(--font-figtree-bold);
+  font-size: 28px;
+}
+.pu-tours-video-exposure-title {
+  font-family: var(--font-polymath-bold);
+  font-size: 56px;
+  line-height: 1.2;
+}
+.pu-tours-video-exposure-subtitle {
+  font-family: var(--font-figtree-regular);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.pu-tours-text-highlight-yellow {
+  color: #ffc107 !important;
+}
+.pu-tours-video-exposure-slider {
+  margin: 0 -15px;
+}
+.pu-tours-video-exposure-slide {
+  outline: none;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+.slick-center .pu-tours-video-exposure-slide {
+  opacity: 1;
+  transform: scale(1);
+}
+.pu-tours-video-thumbnail-wrapper {
+  background-color: #000;
+  border-radius: 8px;
+  border: 4px solid #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  aspect-ratio: 16 / 9;
+}
+.pu-tours-video-label {
+  background-color: #0F0445 !important;
+  color: #ffffff;
+  font-family: var(--font-polymath-semibold);
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+.pu-tours-video-play-btn svg {
+  transition: transform 0.3s ease;
+}
+.pu-tours-video-thumbnail-wrapper:hover .pu-tours-video-play-btn svg {
+  transform: scale(1.1);
+}
+.pu-tours-video-exposure-progress-container {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.pu-tours-video-exposure-progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #ffc107;
+  width: 20%;
+  transition: width 0.3s ease;
+}
+.pu-tours-arrow-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.pu-tours-arrow-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }

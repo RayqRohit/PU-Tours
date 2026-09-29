@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (leadershipSlider.slick('getSlick').slideCount) {
         updateLeadershipProgress(leadershipSlider.slick('getSlick'), 0);
       }
-      
+
       // Initialize nested speaker slider for each card
       jQuery('.pu-tours-speaker-slider').slick({
         slidesToShow: 1,
@@ -358,10 +358,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typeButtons = Array.from(document.querySelectorAll('.pu-tours-filter-btn'));
   const facultySelect = document.getElementById('faculty-filter');
   const searchInput = document.getElementById('tour-search');
-  
+
   const viewAllBtn = document.getElementById('view-all-tours-btn');
   const viewAllContainer = document.getElementById('view-all-tours-container');
-  
+
   let activeType = 'all';
   let showingAll = false;
 
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyFilters = () => {
       const query = searchInput.value.trim().toLowerCase();
       const faculty = facultySelect.value;
-      
+
       let visibleCount = 0;
 
       cards.forEach(card => {
@@ -386,20 +386,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (show) {
           visibleCount++;
           if (!showingAll && visibleCount > 6) {
-             card.style.setProperty('display', 'none', 'important');
+            card.style.setProperty('display', 'none', 'important');
           } else {
-             card.style.setProperty('display', 'block', 'important');
+            card.style.setProperty('display', 'block', 'important');
           }
         } else {
           card.style.setProperty('display', 'none', 'important');
         }
       });
-      
+
       if (viewAllContainer) {
         if (!showingAll && visibleCount > 6) {
-           viewAllContainer.style.setProperty('display', 'block', 'important');
+          viewAllContainer.style.setProperty('display', 'block', 'important');
         } else {
-           viewAllContainer.style.setProperty('display', 'none', 'important');
+          viewAllContainer.style.setProperty('display', 'none', 'important');
         }
       }
     };
@@ -415,23 +415,92 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
 
     searchInput.addEventListener('input', () => {
-       showingAll = false;
-       applyFilters();
+      showingAll = false;
+      applyFilters();
     });
     facultySelect.addEventListener('change', () => {
-       showingAll = false;
-       applyFilters();
+      showingAll = false;
+      applyFilters();
     });
-    
+
     if (viewAllBtn) {
-        viewAllBtn.addEventListener('click', () => {
-            showingAll = true;
-            applyFilters();
-        });
+      viewAllBtn.addEventListener('click', () => {
+        showingAll = true;
+        applyFilters();
+      });
     }
-    
+
     // Initial setup
     applyFilters();
+  }
+
+  // Organization Tabs Logic
+  const orgButtons = document.querySelectorAll('.pu-tours-org-btn');
+  const orgGrids = document.querySelectorAll('.pu-tours-org-grid');
+
+  if (orgButtons.length > 0) {
+    orgButtons.forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Get target
+        const targetId = this.getAttribute('data-target');
+
+        // Update active class on buttons
+        orgButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Hide all grids
+        orgGrids.forEach(grid => {
+          grid.style.display = 'none';
+        });
+
+        // Show target grid
+        const targetGrid = document.querySelector(targetId);
+        if (targetGrid) {
+          targetGrid.style.display = 'grid';
+        }
+      });
+    });
+  }
+
+  // Video Exposure Slick Slider
+  const $videoSlider = jQuery('.pu-tours-video-exposure-slider');
+  if ($videoSlider.length) {
+    $videoSlider.on('init reInit afterChange', function(event, slick, currentSlide) {
+      const i = (currentSlide ? currentSlide : 0);
+      const progressBar = jQuery('#video-slider-progress');
+      if (progressBar.length) {
+        const slideCount = slick.slideCount;
+        const width = ((i + 1) / slideCount) * 100;
+        progressBar.css('width', width + '%');
+      }
+    });
+
+    $videoSlider.slick({
+      centerMode: true,
+      centerPadding: '15%',
+      slidesToShow: 1,
+      dots: false,
+      arrows: true,
+      infinite: true,
+      prevArrow: jQuery('.pu-tours-video-exposure-prev'),
+      nextArrow: jQuery('.pu-tours-video-exposure-next'),
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            centerPadding: '10%'
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            centerPadding: '5%'
+          }
+        }
+      ]
+    });
   }
 
 });
