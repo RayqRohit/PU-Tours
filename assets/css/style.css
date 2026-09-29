@@ -1622,6 +1622,7 @@ img {
   background-clip: text;
   font-family: var(--font-figtree-bold);
   margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
 
 .pu-tours-leadership-desc {
@@ -1636,12 +1637,25 @@ img {
   margin-bottom: 5px;
 }
 
+.pu-tours-speaker-slider .slick-track {
+  display: flex !important;
+}
+
+.pu-tours-speaker-slider .slick-slide {
+  height: auto;
+}
+
+.pu-tours-speaker-slider .slick-slide > div {
+  height: 100%;
+}
+
 .pu-tours-leadership-speaker {
   display: flex !important;
   align-items: center;
   padding: 15px;
   border: 2px dashed #eaeaea;
   border-radius: 8px;
+  height: 95px;
 }
 
 .pu-tours-leadership-speaker .speaker-avatar {
@@ -1684,7 +1698,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin: 10px 0 20px 0;
+      margin: 3px 0 10px 0;
   padding: 0;
   list-style: none;
 }
@@ -1758,7 +1772,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 0 15px;
 }
 
