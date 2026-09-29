@@ -504,3 +504,119 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+function initVoicesSlider() {
+    if (typeof jQuery !== 'undefined' && jQuery.fn.slick) {
+        var $ = jQuery;
+        
+        $('.pu-tours-voices-slider').each(function() {
+            var $slider = $(this);
+            var $wrapper = $slider.closest('.pu-tours-voices-slick-wrapper');
+            var $progressBar = $wrapper.find('.pu-tours-voices-progress-bar');
+
+            if (!$slider.hasClass('slick-initialized')) {
+
+                var slideCount = $slider.children().length;
+                if (slideCount === 1) {
+                    $slider.append($slider.children().clone());
+                    $slider.append($slider.children().clone());
+                    $slider.append($slider.children().clone());
+                } else if (slideCount === 2) {
+                    $slider.append($slider.children().clone());
+                }
+
+                function updateProgressBar(slick, currentSlide) {
+                    if (slick.slideCount > 0) {
+                        const calcProgress = ((currentSlide + 1) / slick.slideCount) * 100;
+                        $progressBar.css('width', calcProgress + '%');
+                    }
+                }
+
+                function updateInstagramDots(slick, currentSlide) {
+                    var $dots = $slider.find('.slick-dots li');
+                    var totalDots = $dots.length;
+                    var maxVisible = 5;
+
+                    $dots.removeClass('pu-tours-voices-dot-near pu-tours-voices-dot-far');
+
+                    if (totalDots <= maxVisible) {
+                        $dots.css('transform', 'translateX(0px)');
+                        return;
+                    }
+
+                    var translateIndex = 0;
+
+                    if (currentSlide <= 2) {
+                        translateIndex = 0;
+                    } else if (currentSlide >= totalDots - 3) {
+                        translateIndex = totalDots - maxVisible;
+                    } else {
+                        translateIndex = currentSlide - 2;
+                    }
+
+                    var moveAmount = translateIndex * 14; 
+                    $dots.css('transform', 'translateX(-' + moveAmount + 'px)');
+
+                    $dots.each(function(index) {
+                        var distance = Math.abs(index - currentSlide);
+                        if (distance === 2) {
+                            $(this).addClass('pu-tours-voices-dot-near');
+                        } else if (distance >= 3) {
+                            $(this).addClass('pu-tours-voices-dot-far');
+                        }
+                    });
+                }
+
+                $slider.on('init', function (event, slick) {
+                    updateProgressBar(slick, 0);
+                    updateInstagramDots(slick, 0);
+                });
+
+                $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                    updateProgressBar(slick, nextSlide);
+                    updateInstagramDots(slick, nextSlide);
+                });
+
+                $slider.slick({
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    infinite: false,
+                    arrows: true,
+                    prevArrow: $wrapper.find('.pu-tours-voices-btn-prev'),
+                    nextArrow: $wrapper.find('.pu-tours-voices-btn-next'),
+                    dots: false,
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 1.5
+                            }
+                        },
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 1.2
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1.05,
+                                arrows: false,
+                                dots: true
+                            }
+                        }
+                    ]
+                });
+            }
+        });
+    } else {
+        setTimeout(initVoicesSlider, 50);
+    }
+}
+
+$(document).ready(function() {
+    initVoicesSlider();
+});

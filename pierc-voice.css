@@ -1,0 +1,357 @@
+/* Background & Typography */
+.pu-tours-voices-section {
+    background-color: #f7f7f7;
+}
+
+.pu-tours-voices-tagline {
+    color: #1a0b36;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: var(--font-figtree-bold);
+}
+
+.pu-tours-voices-title {
+    color: #1a0b36;
+    font-size: 56px;
+    font-weight: 700 !important;
+    font-family: var(--font-polymath-bold);
+}
+
+.pu-tours-voices-title .text-accent {
+    background: var(--New, linear-gradient(90deg, #B53C72 0%, #5641E0 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pu-tours-voices-subtitle {
+    font-size: 18px;
+    font-family: var(--font-figtree-regular);
+}
+
+.pu-tours-voices-bg-quote-icon {
+    line-height: 0;
+}
+
+/* -------------------------------------------------
+   DESKTOP CARD STYLES (Screenshot 1)
+------------------------------------------------ */
+.pu-tours-voices-card-desktop {
+    background-color: #0f0445;
+    color: #ffffff;
+    min-height: 280px;
+}
+
+.pu-tours-voices-card-content {
+    flex: 1.2;
+}
+
+.pu-tours-voices-card-image-side {
+    flex: 1;
+    min-height: 100%;
+}
+
+.pu-tours-voices-card-title,
+.pu-tours-voices-card-title p,
+.pu-tours-voices-card-title span {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    font-family: var(--font-figtree-bold) !important;
+    margin-bottom: 0;
+}
+
+.pu-tours-voices-card-title .text-warning,
+.pu-tours-voices-card-title span[style*="color"] {
+    color: #ffc107 !important;
+}
+
+.pu-tours-voices-card-quote {
+    color: #c0bdd0;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: var(--font-figtree-regular);
+}
+
+.pu-tours-voices-card-rating .bi-star-fill {
+    color: #ffc107 !important;
+}
+
+.pu-tours-voices-card-image-side::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13, 6, 40, 0.95) 0%, rgba(13, 6, 40, 0) 60%);
+    pointer-events: none;
+}
+
+/* Desktop Progress & Arrows */
+.pu-tours-voices-custom-progress {
+    position: relative;
+    height: 4px;
+    background: #0f0445;
+    border-radius: 4px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.pu-tours-voices-progress-bar {
+    height: 100%;
+    background: #ffc107;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.pu-tours-voices-arrows .btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1a0b36;
+    color: #1a0b36 !important;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.pu-tours-voices-arrows .btn i {
+    transition: color 0.3s ease;
+}
+
+.pu-tours-voices-arrows .btn:hover {
+    background: #1a0b36 !important;
+    color: #ffffff !important;
+}
+
+.pu-tours-voices-arrows .btn:hover i {
+    color: #ffffff !important;
+}
+
+.pu-tours-voices-arrows .btn.slick-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* ---------------------------------------------------
+   MOBILE CARD STYLES (Screenshot 2)
+--------------------------------------------------- */
+.pu-tours-voices-card-mobile {
+    border: 1px solid #eaeaea;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+}
+
+.pu-tours-voices-mobile-card-image {
+    height: 350px;
+}
+
+.pu-tours-voices-mobile-img-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+    padding-top: 80px !important;
+}
+
+.pu-tours-voices-mobile-quote {
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #000;
+	height: 100px;        /* Limits the height */
+  	overflow-y: auto;     /* Adds vertical scrollbar only when needed */
+  	overflow-x: hidden;
+}
+
+.pu-tours-voices-card-mobile a img[alt="LinkedIn"] {
+    filter: invert(1) opacity(0.8);
+}
+
+.fs-7 {
+    font-size: 0.75rem;
+}
+
+/* ---------------------------------------------------
+   FIXED MOBILE DOTS STYLING
+--------------------------------------------------- */
+
+/* ---------------------------------------------------
+   PERFECTLY CENTERED INSTAGRAM-STYLE DOTS
+--------------------------------------------------- */
+.pu-tours-voices-slider .slick-dots {
+    display: flex !important;
+    justify-content: flex-start; /* Start flex layout for smooth translateX */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 0 auto !important;
+    gap: 6px;
+    
+    /* Reset Slick default position absolute */
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    
+    /* Fixed viewport width for exactly 5 visible dots (5 dots * 8px + 4 gaps * 6px = 64px) */
+    width: 84px !important;
+    max-width: 84px !important;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.pu-tours-voices-slider .slick-dots li {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0; /* Prevents dot squishing */
+    width: 8px;
+    height: 8px;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Clear default Slick pseudo-element */
+.pu-tours-voices-slider .slick-dots li button::before {
+    display: none !important;
+    content: none !important;
+}
+
+.pu-tours-voices-slider .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #6f6f6f;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.5;
+}
+
+/* Active Yellow Pill Dot */
+.pu-tours-voices-slider .slick-dots li.slick-active button {
+    width: 22px;
+    height: 8px;
+    border-radius: 10px;
+    background: #FFC107 !important;
+    opacity: 1;
+}
+
+/* Dynamic dot scaling */
+.pu-tours-voices-slider .slick-dots li.pu-tours-voices-dot-near button {
+    transform: scale(0.75);
+    opacity: 0.7;
+}
+
+.pu-tours-voices-slider .slick-dots li.pu-tours-voices-dot-far button {
+    transform: scale(0.5);
+    opacity: 0.4;
+}
+
+/* Base Active Yellow Pill Dot */
+.pu-tours-voices-slider .slick-dots li.slick-active button {
+    width: 22px;
+    height: 8px;
+    border-radius: 10px;
+    background: #FFC107 !important;
+    opacity: 1;
+}
+
+/* Instagram Dynamic Scaling Styles */
+.pu-tours-voices-slider .slick-dots li.pu-tours-voices-dot-near button {
+    transform: scale(0.75);
+    opacity: 0.7;
+}
+
+.pu-tours-voices-slider .slick-dots li.pu-tours-voices-dot-far button {
+    transform: scale(0.5);
+    opacity: 0.4;
+}
+
+
+/* ---------------------------------------------------
+   MOBILE HEADER TYPOGRAPHY OVERRIDES
+--------------------------------------------------- */
+@media (max-width: 767px) {
+    .pu-tours-voices-tagline {
+        font-size: 16px;
+        margin-bottom: 4px !important;
+    }
+    
+    .pu-tours-voices-title {
+        font-size: 38px;
+        background: linear-gradient(90deg, #C82B73 0%, #6A3BBD 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        line-height: 1.15;
+    }
+    
+    .pu-tours-voices-title .text-accent {
+        color: transparent !important;
+        -webkit-text-fill-color: transparent !important;
+    }
+    
+    .pu-tours-voices-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+.page-id-61861 .slick-dots li {
+    width: auto !important;
+}
+
+
+/* home page starts */
+.page-id-56162 .pu-tours-voices-title .text-accent{
+	font-size: inherit !important;
+}
+.page-id-56162 .pu-tours-voices-card-img-overlay .text-white{
+	color:#FFC800 !important;
+	margin-bottom: 2px !important;
+}
+.page-id-56162 .pu-tours-voices-card-img-overlay .text-white-50{
+	color:#FFF !important;
+}
+.page-id-56162 .pu-tours-voices-slick-wrapper .pu-tours-voices-controls-wrapper{
+	margin-top: 1.5rem !important;
+}
+@media only screen and (min-width: 769px) {
+    .page-id-56162 .pu-tours-voices-card-desktop .pu-tours-voices-card-image-side .pu-tours-voices-card-img-overlay {
+        z-index: 1 !important;
+        margin-left: 10px !important;
+        margin-bottom: 12px !important;
+        width: 80% !important;
+    }
+}
+/* home page ends here */
+/* Equal Height for Slick Slider */
+.pu-tours-voices-slider .slick-track {
+    display: flex !important;
+}
+.pu-tours-voices-slider .slick-slide {
+    height: auto !important;
+    display: flex !important;
+}
+.pu-tours-voices-slider .slick-slide > div {
+    display: flex;
+    width: 100%;
+}
+.pu-tours-voices-slide-item {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Arrow style overrides for plain chevron */
+.pu-tours-voices-arrows .btn { border: none !important; background: transparent !important; color: #0f0445 !important; }
+.pu-tours-voices-arrows .btn:hover { background: transparent !important; color: #0f0445 !important; opacity: 0.7; }
+.pu-tours-voices-arrows .btn:hover i { color: #0f0445 !important; }
+
+.pu-tours-voices-slider { margin-left: -1rem !important; margin-right: -1rem !important; }
