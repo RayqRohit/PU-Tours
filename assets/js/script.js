@@ -620,3 +620,92 @@ function initVoicesSlider() {
 $(document).ready(function() {
     initVoicesSlider();
 });
+
+/* =========================================================
+   FAQ ACCORDION
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', function() {
+    const detailsElements = document.querySelectorAll('.pu-tours-faq-details');
+    if (detailsElements.length > 0) {
+        detailsElements.forEach(function (detail) {
+            const summary = detail.querySelector('.pu-tours-faq-summary');
+            if (summary) {
+                summary.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (detail.hasAttribute('open')) {
+                        detail.classList.add('closing');
+                        setTimeout(function () {
+                            detail.removeAttribute('open');
+                            detail.classList.remove('closing');
+                        }, 300);
+                    } else {
+                        detailsElements.forEach(function (otherDetail) {
+                            if (otherDetail !== detail && otherDetail.hasAttribute('open')) {
+                                otherDetail.classList.add('closing');
+                                setTimeout(function () {
+                                    otherDetail.removeAttribute('open');
+                                    otherDetail.classList.remove('closing');
+                                }, 300);
+                            }
+                        });
+                        detail.setAttribute('open', '');
+                    }
+                });
+            }
+        });
+    }
+
+    /* =========================================================
+       FAQ VIEW MORE
+       ========================================================= */
+    const viewMoreBtn = document.getElementById('pu-tours-faq-view-more-btn');
+    const hiddenFaqs = document.querySelectorAll('.pu-tours-faq-hidden');
+    if (viewMoreBtn) {
+        viewMoreBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            let isHidden = false;
+            hiddenFaqs.forEach(function (faq) {
+                if (faq.classList.contains('d-none')) {
+                    faq.classList.remove('d-none');
+                    isHidden = true;
+                } else {
+                    faq.classList.add('d-none');
+                    faq.removeAttribute('open');
+                }
+            });
+            if (isHidden) {
+                viewMoreBtn.innerHTML = 'View less &uarr;';
+            } else {
+                viewMoreBtn.innerHTML = 'View more &darr;';
+            }
+        });
+    }
+});
+
+/* =========================================================
+   INCUBATION SLIDER
+   ========================================================= */
+document.addEventListener("DOMContentLoaded", function () {
+    function initIncubationSlider() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.slick) {
+            var $slider = jQuery('.incubation-slick-slider');
+            if ($slider.length && !$slider.hasClass('slick-initialized')) {
+                $slider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    infinite: true,
+                    arrows: false,
+                    dots: true,
+                    appendDots: jQuery('.incubation-dots-container'),
+                    fade: false,
+                    cssEase: 'ease-in-out'
+                });
+            }
+        } else {
+            setTimeout(initIncubationSlider, 100);
+        }
+    }
+    initIncubationSlider();
+});
