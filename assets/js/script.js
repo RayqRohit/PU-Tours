@@ -6,14 +6,14 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
   const toursData = [
-    { id: 'tour-1', tag: 'VADODARA', title: 'Campus Virtual Tour', year: '2025-26', badgeColor: '#008899', videoId: 'CoK-vRyucMU', embedUrl: 'https://www.youtube.com/embed/CoK-vRyucMU?si=nu63fEl72-k9Vyre', heading: 'Virtual Campus Tour', subheading: 'Award-Winning Vadodara Campus' },
-    { id: 'tour-2', tag: 'BANGALORE', title: 'Business Leadership Tour', year: '2025', badgeColor: '#1A4D80', videoId: 'urZTpngOKMU', embedUrl: 'https://www.youtube.com/embed/urZTpngOKMU?si=-FBpzlRRdG9E5E_z', heading: 'Business Leadership', subheading: 'Bangalore Tech & Innovation' },
-    { id: 'tour-3', tag: 'MUMBAI', title: 'Leadership Tour', year: '2025', badgeColor: '#0F0445', videoId: 'Cy4rIpjHlH8', embedUrl: 'https://www.youtube.com/embed/Cy4rIpjHlH8?si=OaEQREfzzvMbPvug', heading: 'Mumbai Leadership Tour', subheading: 'A Saga of Learning & Legacy' },
-    { id: 'tour-4', tag: 'BANGALORE', title: 'Enterprise Tour', year: '2025', badgeColor: '#2A2181', videoId: '75mkemYOtcU', embedUrl: 'https://www.youtube.com/embed/75mkemYOtcU?si=5GcGbKr5hTzxKvni', heading: 'Corporate Innovation', subheading: 'Silicon Valley of India' },
-    { id: 'tour-5', tag: 'DELHI', title: 'National Governance Tour', year: '2025', badgeColor: '#C2410C', videoId: '7OlwbVLLAbI', embedUrl: 'https://www.youtube.com/embed/7OlwbVLLAbI?si=YHwvobBif-_fPFSc', heading: 'Governance & Diplomacy', subheading: 'New Delhi Capital Experience' },
-    { id: 'tour-6', tag: 'MUMBAI', title: 'Architecture & Design', year: '2025', badgeColor: '#047857', videoId: 'kwSSr-eUis8', embedUrl: 'https://www.youtube.com/embed/kwSSr-eUis8?si=I3hS9R0NXyHYwkXn', heading: 'Architecture & Design', subheading: 'Mumbai Fashion & Lifestyle' },
-    { id: 'tour-7', tag: 'MUMBAI', title: 'Justice in Journey', year: '2025', badgeColor: '#6D28D9', videoId: 'JDvKTHLaAbs', embedUrl: 'https://www.youtube.com/embed/JDvKTHLaAbs?si=cmKIAON94-Driurt', heading: 'Justice in Journey', subheading: 'High Court & Legal Chambers' },
-    { id: 'tour-8', tag: 'DELHI', title: 'Civil Servants Tour', year: '2025', badgeColor: '#B45309', videoId: 'f4RvTWOn7M4', embedUrl: 'https://www.youtube.com/embed/f4RvTWOn7M4?si=EA64tVVujAE2NymS', heading: 'Civil Services Tour', subheading: 'Delhi Future Leaders Residency' }
+    { id: 'tour-1', tag: 'VADODARA', title: 'Campus Virtual Tour', year: '2025-26', badgeColor: '#008899', videoId: 'CoK-vRyucMU', embedUrl: 'https://www.youtube.com/embed/CoK-vRyucMU', heading: 'Virtual Campus Tour', subheading: 'Award-Winning Vadodara Campus' },
+    { id: 'tour-2', tag: 'BANGALORE', title: 'Business Leadership Tour', year: '2025', badgeColor: '#1A4D80', videoId: 'urZTpngOKMU', embedUrl: 'https://www.youtube.com/embed/urZTpngOKMU', heading: 'Business Leadership', subheading: 'Bangalore Tech & Innovation' },
+    { id: 'tour-3', tag: 'MUMBAI', title: 'Leadership Tour', year: '2025', badgeColor: '#0F0445', videoId: 'Cy4rIpjHlH8', embedUrl: 'https://www.youtube.com/embed/Cy4rIpjHlH8', heading: 'Mumbai Leadership Tour', subheading: 'A Saga of Learning & Legacy' },
+    { id: 'tour-4', tag: 'BANGALORE', title: 'Enterprise Tour', year: '2025', badgeColor: '#2A2181', videoId: '75mkemYOtcU', embedUrl: 'https://www.youtube.com/embed/75mkemYOtcU', heading: 'Corporate Innovation', subheading: 'Silicon Valley of India' },
+    { id: 'tour-5', tag: 'DELHI', title: 'National Governance Tour', year: '2025', badgeColor: '#C2410C', videoId: '7OlwbVLLAbI', embedUrl: 'https://www.youtube.com/embed/7OlwbVLLAbI', heading: 'Governance & Diplomacy', subheading: 'New Delhi Capital Experience' },
+    { id: 'tour-6', tag: 'MUMBAI', title: 'Architecture & Design', year: '2025', badgeColor: '#047857', videoId: 'kwSSr-eUis8', embedUrl: 'https://www.youtube.com/embed/kwSSr-eUis8', heading: 'Architecture & Design', subheading: 'Mumbai Fashion & Lifestyle' },
+    { id: 'tour-7', tag: 'MUMBAI', title: 'Justice in Journey', year: '2025', badgeColor: '#6D28D9', videoId: 'JDvKTHLaAbs', embedUrl: 'https://www.youtube.com/embed/JDvKTHLaAbs', heading: 'Justice in Journey', subheading: 'High Court & Legal Chambers' },
+    { id: 'tour-8', tag: 'DELHI', title: 'Civil Servants Tour', year: '2025', badgeColor: '#B45309', videoId: 'f4RvTWOn7M4', embedUrl: 'https://www.youtube.com/embed/f4RvTWOn7M4', heading: 'Civil Services Tour', subheading: 'Delhi Future Leaders Residency' }
   ];
 
   const $ = id => document.getElementById(id);
@@ -708,4 +708,143 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     initIncubationSlider();
+
+    /* =========================================================
+       WHAT IS SLIDER
+       ========================================================= */
+    function initWhatIsSlider() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.slick) {
+            var $slider = jQuery('.pu-tours-what-is-slider');
+            if ($slider.length && !$slider.hasClass('slick-initialized')) {
+                // Only initialize slick on small screens to match max-width 360px request
+                if (window.innerWidth <= 767) {
+                    $slider.slick({
+                        slidesToShow: 1.15,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        arrows: false,
+                        dots: true,
+                        appendDots: jQuery('.pu-tours-what-is-dots-container')
+                    });
+                }
+                
+                // Re-check on resize
+                jQuery(window).on('resize', function() {
+                    if (window.innerWidth <= 767) {
+                        if (!$slider.hasClass('slick-initialized')) {
+                            $slider.slick({
+                                slidesToShow: 1.15,
+                                slidesToScroll: 1,
+                                infinite: false,
+                                arrows: false,
+                                dots: true,
+                                appendDots: jQuery('.pu-tours-what-is-dots-container')
+                            });
+                        }
+                    } else {
+                        if ($slider.hasClass('slick-initialized')) {
+                            $slider.slick('unslick');
+                        }
+                    }
+                });
+            }
+        } else {
+            setTimeout(initWhatIsSlider, 100);
+        }
+    }
+    initWhatIsSlider();
+    /* =========================================================
+       PROCESS SLIDER
+       ========================================================= */
+    function initProcessSlider() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.slick) {
+            var $slider = jQuery('.pu-tours-process-slider');
+            if ($slider.length && !$slider.hasClass('slick-initialized')) {
+                // Initialize slick on small screens and tablets
+                if (window.innerWidth <= 991) {
+                    $slider.slick({
+                        slidesToShow: window.innerWidth <= 767 ? 1.15 : 2.15,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        arrows: false,
+                        dots: true,
+                        appendDots: jQuery('.pu-tours-process-dots-container')
+                    });
+                }
+                
+                // Re-check on resize
+                jQuery(window).on('resize', function() {
+                    if (window.innerWidth <= 991) {
+                        if (!$slider.hasClass('slick-initialized')) {
+                            $slider.slick({
+                                slidesToShow: window.innerWidth <= 767 ? 1.15 : 2.15,
+                                slidesToScroll: 1,
+                                infinite: false,
+                                arrows: false,
+                                dots: true,
+                                appendDots: jQuery('.pu-tours-process-dots-container')
+                            });
+                        } else {
+                            // Update slidesToShow dynamically on resize if already initialized
+                            $slider.slick('slickSetOption', 'slidesToShow', window.innerWidth <= 767 ? 1.15 : 2.15, true);
+                        }
+                    } else {
+                        if ($slider.hasClass('slick-initialized')) {
+                            $slider.slick('unslick');
+                        }
+                    }
+                });
+            }
+        } else {
+            setTimeout(initProcessSlider, 100);
+        }
+    }
+    initProcessSlider();
+
+    /* =========================================================
+       CAREERS SLIDER
+       ========================================================= */
+    function initCareersSlider() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.slick) {
+            var $slider = jQuery('.pu-tours-career-slider');
+            if ($slider.length && !$slider.hasClass('slick-initialized')) {
+                // Initialize slick on small screens and tablets
+                if (window.innerWidth <= 991) {
+                    $slider.slick({
+                        slidesToShow: window.innerWidth <= 767 ? 1.1 : 1.5,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        arrows: false,
+                        dots: true,
+                        appendDots: jQuery('.pu-tours-career-dots-container')
+                    });
+                }
+                
+                // Re-check on resize
+                jQuery(window).on('resize', function() {
+                    if (window.innerWidth <= 991) {
+                        if (!$slider.hasClass('slick-initialized')) {
+                            $slider.slick({
+                                slidesToShow: window.innerWidth <= 767 ? 1.1 : 1.5,
+                                slidesToScroll: 1,
+                                infinite: false,
+                                arrows: false,
+                                dots: true,
+                                appendDots: jQuery('.pu-tours-career-dots-container')
+                            });
+                        } else {
+                            $slider.slick('slickSetOption', 'slidesToShow', window.innerWidth <= 767 ? 1.1 : 1.5, true);
+                        }
+                    } else {
+                        if ($slider.hasClass('slick-initialized')) {
+                            $slider.slick('unslick');
+                        }
+                    }
+                });
+            }
+        } else {
+            setTimeout(initCareersSlider, 100);
+        }
+    }
+    initCareersSlider();
 });

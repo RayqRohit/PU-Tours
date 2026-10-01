@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-family: 'Figtree-Regular';
   src: url('../fonts/Figtree-Regular.ttf') format('truetype');
 }
@@ -913,6 +913,39 @@ img {
   border-color: #d96791;
 }
 
+/* Gap for slick slider cards */
+.pu-tours-what-is-slider.slick-initialized,
+.pu-tours-process-slider.slick-initialized {
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+}
+
+.pu-tours-what-is-slider .slick-slide,
+.pu-tours-process-slider .slick-slide {
+  margin: 0 8px;
+  height: inherit !important;
+}
+
+.pu-tours-what-is-slider .slick-track,
+.pu-tours-process-slider .slick-track {
+  display: flex !important;
+}
+
+.pu-tours-what-is-slider .slick-slide>div,
+.pu-tours-process-slider .slick-slide>div {
+  height: 100%;
+}
+
+.pu-tours-what-is-slider .col,
+.pu-tours-process-slider .col {
+  height: 100%;
+}
+
+.pu-tours-what-is-slider .slick-list,
+.pu-tours-process-slider .slick-list {
+  margin: 0 !important;
+}
+
 .pu-tours-what-is-number {
   background: #dbdbdb;
   color: #0F0445;
@@ -1139,6 +1172,7 @@ img {
 
 .pu-tours-process-badge {
   display: inline-block;
+  align-self: flex-start;
   background-color: #e6e6ec;
   color: #0F0445;
   font-family: var(--font-figtree-bold);
@@ -2562,41 +2596,44 @@ img {
   opacity: 0.8;
   color: #fff;
 }
+
 /* ==========================================================================
    Incubation Hero Section
    ========================================================================== */
 
 /* Main Section Background & Typography */
 .incubation-hero-section {
-    background-color: #0b0238; /* Exact Dark Navy Theme Background */
-    padding-top: 60px;
-    padding-bottom: 60px;
-    font-family: var(--font-figtree-regular);
-    font-weight: 400;
+  background-color: #0b0238;
+  /* Exact Dark Navy Theme Background */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: var(--font-figtree-regular);
+  font-weight: 400;
 }
 
 .incubation-tagline {
-    font-family: var(--font-figtree-medium);
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #b0a8d9;
+  font-family: var(--font-figtree-medium);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #b0a8d9;
 }
 
 .incubation-main-title {
-    font-family: var(--font-polymath-bold);
-    font-weight: 700;
-    color: #ffc107; /* Yellow Accent Title */
-    font-size: 3rem;
-    line-height: 1.15;
+  font-family: var(--font-polymath-bold);
+  font-weight: 700;
+  color: #ffc107;
+  /* Yellow Accent Title */
+  font-size: 3rem;
+  line-height: 1.15;
 }
 
 .incubation-desc {
-    font-family: var(--font-figtree-regular);
-    font-size: 1rem;
-    font-weight: 400;
-    color: #c0b9e8;
-    line-height: 1.6;
-    max-width: 90%;
+  font-family: var(--font-figtree-regular);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #c0b9e8;
+  line-height: 1.6;
+  max-width: 90%;
 }
 
 /* ==========================================================================
@@ -2604,40 +2641,39 @@ img {
    ========================================================================== */
 
 .btn-incubation-apply {
-    font-family: var(--font-figtree-semibold);
-    font-size: 1.3rem;
-    font-weight: 600;
-    background-color: #ffc107;
-    color: #0b0238 !important;
-    border: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.25);
+  font-family: var(--font-figtree-semibold);
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #ffc107;
+  color: #0b0238 !important;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.25);
 }
 
 .btn-incubation-apply:hover,
 .btn-incubation-apply:focus,
 .btn-incubation-apply:active {
-    background-color: #e0a800 !important;
-    color: #0b0238 !important;
-    transform: translateY(-2px);
+  background-color: #e0a800 !important;
+  color: #0b0238 !important;
+  transform: translateY(-2px);
 }
 
 .btn-incubation-outline {
-    font-family: var(--font-figtree-semibold);
-    font-size: 1.1rem;
-    font-weight: 600;
-    background-color: transparent;
-    color: #fff !important;
-    border: 1px solid #fff;
-    transition: all 0.3s ease;
+  font-family: var(--font-figtree-semibold);
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: #fff !important;
+  border: 1px solid #fff;
+  transition: all 0.3s ease;
 }
 
 .btn-incubation-outline:hover,
 .btn-incubation-outline:focus,
 .btn-incubation-outline:active {
-    background-color: #fff !important;
-    color: #0b0238 !important;
-    transform: translateY(-2px);
+  background-color: #fff !important;
+  color: #0b0238 !important;
 }
 
 /* ==========================================================================
@@ -2645,104 +2681,115 @@ img {
    ========================================================================== */
 
 .incubation-card-box {
-    height: 560px;
-    max-width: 450px;
-    margin: 0 auto;
-    background-color: #d8d8d8; /* Placeholder Grey Background */
-    border-radius: 12px !important;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 560px;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #d8d8d8;
+  /* Placeholder Grey Background */
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .placeholder-box {
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.8) 0%,
-        rgba(0, 0, 0, 0.1) 100%
-    ), #cccccc;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.1) 100%), #cccccc;
 }
 
 .slide-bottom-overlay {
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.85) 0%,
-        rgba(0, 0, 0, 0) 100%
-    );
-    z-index: 2;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
 }
 
 .tracking-wider {
-    font-family: var(--font-figtree-medium);
-    font-weight: 500;
-    letter-spacing: 0.8px;
+  font-family: var(--font-figtree-medium);
+  font-weight: 500;
+  letter-spacing: 0.8px;
 }
 
 .incubation-slick-slider .slick-slide {
-    outline: none;
+  outline: none;
 }
 
 .incubation-slide-item {
-    padding: 0 4px;
+  padding: 0 4px;
 }
 
 /* ==========================================================================
    CUSTOM SLICK PILL DOTS (CENTERED & FIXED)
    ========================================================================== */
 
-.incubation-dots-container {
-    width: 100%;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+.incubation-dots-container,
+.pu-tours-what-is-dots-container,
+.pu-tours-process-dots-container {
+  width: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
-.incubation-dots-container .slick-dots {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 6px;
-    width: auto !important;
-    position: static !important; /* Slick position reset */
+.incubation-dots-container .slick-dots,
+.pu-tours-what-is-dots-container .slick-dots,
+.pu-tours-process-dots-container .slick-dots {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 6px;
+  width: auto !important;
+  position: static !important;
+  /* Slick position reset */
 }
 
-.incubation-dots-container .slick-dots li {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: auto !important;
-    height: auto !important;
+.incubation-dots-container .slick-dots li,
+.pu-tours-what-is-dots-container .slick-dots li,
+.pu-tours-process-dots-container .slick-dots li {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  height: auto !important;
 }
 
-.incubation-dots-container .slick-dots li button {
-    font-size: 0;
-    font-weight: 400;
-    line-height: 0;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #342766; /* Inactive Dark Dot */
-    border: none;
-    outline: none;
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
+.incubation-dots-container .slick-dots li button,
+.pu-tours-what-is-dots-container .slick-dots li button,
+.pu-tours-process-dots-container .slick-dots li button {
+  font-size: 0;
+  font-weight: 400;
+  line-height: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #342766;
+  /* Inactive Dark Dot */
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
 }
 
 /* Slick ke default pseudo element (:before) ko hatane ke liye */
-.incubation-dots-container .slick-dots li button:before {
-    display: none !important;
+.incubation-dots-container .slick-dots li button:before,
+.pu-tours-what-is-dots-container .slick-dots li button:before,
+.pu-tours-process-dots-container .slick-dots li button:before {
+  display: none !important;
 }
 
 /* Active Pill Shape Yellow Dot */
-.incubation-dots-container .slick-dots li.slick-active button {
-    width: 22px;
-    height: 8px;
-    border-radius: 10px;
-    background: #ffc107; /* Yellow Active Dot */
+.incubation-dots-container .slick-dots li.slick-active button,
+.pu-tours-what-is-dots-container .slick-dots li.slick-active button,
+.pu-tours-process-dots-container .slick-dots li.slick-active button {
+  width: 22px;
+  height: 8px;
+  border-radius: 10px;
+  background: #ffc107;
+  /* Yellow Active Dot */
 }
-
